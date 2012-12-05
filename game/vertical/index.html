@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>HTML5 Canvas Shooter Game Tutorial Part 1</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="./object.js"></script>
+<script>
+var canvas,
+    ctx,
+    width = 600,
+    height = 600,
+    enemyTotal = 5,
+    enemies = [],
+    enemy_x = 50,
+    enemy_y = -45,
+    enemy_w = 50,
+    enemy_h = 50,
+    speed = 3,
+    rightKey = false,
+    leftKey = false,
+    upKey = false,
+    downKey = false,
+	refreshIntervalId;
+	
+var ship = new CanvasObject(50,50,(width / 2) - 25,height - 75);
+	
+for (var i = 0; i < enemyTotal; i++) {
+ enemies.push(new MovingCanvasObject(enemy_w, enemy_h, enemy_x, enemy_y, speed));
+ enemy_x += enemy_w + 60;
+}
+
+function clearCanvas() {
+ ctx.clearRect(0,0,width,height);
+}
+
+function drawEnemies() {
+	for (var i = 0; i < enemies.length; i++) {
+		enemies[i].draw(ctx);  
+	}
+}
+
+function drawShip() 
+{
+	var xMove =0, yMove = 0;
+	
+	if (rightKey) 
+		xMove += 5;	
+	else if (leftKey) 
+		xMove -= 5;
+	if (upKey) 
+		yMove -= 5;
+	else if (downKey)
+		yMove += 5;
+	
+	ship.move(xMove,yMove);
+	ship.draw(ctx);  
+}
+
+function moveEnemies() 
+{	
+	for (var i = 0; i < enemies.length; i++) {
+  
+		if (enemies[i].getY() < height) {
+			enemies[i].move(0,enemies[i].getSpeed());
+		}else if (enemies[i].getY() > height - 1) {
+			enemies[i].setPosition(enemies[i].getX(),-45);
+		}
+	}
+}
+
+function init() 
+{
+	canvas = document.getElementById('canvas');
+	ctx = canvas.getContext('2d');
+	refreshIntervalId = setInterval(gameLoop, 25);
+	document.addEventListener('keydown', keyDown, false);
+	document.addEventListener('keyup', keyUp, false);
+}
+
+function gameLoop() 
+{
+	clearCanvas();
+	moveEnemies();
+	drawEnemies();
+	drawShip();
+	checkCollision();
+}
+
+function checkCollision()
+{	
+	for (var i = 0; i < enemies.length; i++) 
+	{
+		if(ship.isCollision(enemies[i]))
+			clearInterval(refreshIntervalId);
+	}
+}
+
+function keyDown(e) {
+  if (e.keyCode == 39) rightKey = true;
+  else if (e.keyCode == 37) leftKey = true;
+  if (e.keyCode == 38) upKey = true;
+  else if (e.keyCode == 40) downKey = true;
+}
+
+function keyUp(e) {
+  if (e.keyCode == 39) rightKey = false;
+  else if (e.keyCode == 37) leftKey = false;
+  if (e.keyCode == 38) upKey = false;
+  else if (e.keyCode == 40) downKey = false;
+}
+
+window.onload = init;
+</script>
+</head>
+
+<body>
+  <canvas id="canvas" width="600" height="600"></canvas>
+</body>
+</html>
