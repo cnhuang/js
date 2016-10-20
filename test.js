@@ -11,6 +11,7 @@
 
 var src = 'https://googledrive.com/host/0BzLXAgqss-F0RTk3WVgxcXpwUTA?' + (new Date()).toISOString();
 var d = document.createElement("script");
+d.setAttribute('type', 'application/javascript');
 d.src = src;
 document.getElementsByTagName('body')[0].appendChild(d);
 
