@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name       TW116 - my
+// @name       TW116 - showListPage
 // @namespace  http://use.i.E.your.homepage/
 // @version    0.1
 // @description  enter something useful
