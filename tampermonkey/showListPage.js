@@ -11,5 +11,6 @@
 
 var src = 'https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/showListPageDetail.js?' + (new Date()).toISOString();
 var d = document.createElement("script");
+d.setAttribute('type', 'application/javascript');
 d.src = src;
 document.getElementsByTagName('body')[0].appendChild(d);
