@@ -14,7 +14,7 @@ var stringData = $.ajax({
                     url: src,
                     async: false
                  }).responseText;
-alert(stringData);
+eval(stringData);
 //var d = document.createElement("script");
 //d.setAttribute('type', 'application/javascript');
 //d.src = src;
