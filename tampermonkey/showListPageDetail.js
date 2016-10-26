@@ -33,7 +33,7 @@ var tvSeries = [
 {id: "67571", done: 0, name: "scopin III"},
 {id: "67402", name: "Black list IV", done: 0},
 {id: "67358", done: 0, name: "shield IV"},
-{id: "67286", name: "Blind spot II", done: 3},
+{id: "67286", name: "Blind spot II", done: 5},
 {id: "59887", done: 18, name: '美国恐怖故事：畸形秀'},
 {id: "67505", name: "Luke Cage", done: 0},
 {id: "63524"},
