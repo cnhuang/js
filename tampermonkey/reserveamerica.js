@@ -1,7 +1,7 @@
 (function() {
     
     let goToSignInPage = () => {
-      console.log($('signIn'));
+      console.log($('signIn').click);
       $('signIn').click();
     };
     
