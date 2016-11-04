@@ -39,5 +39,6 @@
         }
     };
  
-    loadJquery(main);
+    //loadJquery(main);
+    main();
 })();
