@@ -5,7 +5,7 @@
     };
     
     let login = () => {
-        if ($('progresspopup') && $('progresspopup').length != 0 && $('progresspopup').style.display == 'none') {
+        if ($('progresspopup') && ($('progresspopup').style.display == 'none') || $('progresspopup').length != 0)) {
             $('AemailGroup_1733152645').value = 'cnhuang@gmail.com';
             $('ApasswrdGroup_704558654').value = 'g3sj61u3';
             $('submitForm_submitForm').click();
