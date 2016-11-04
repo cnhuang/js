@@ -1,8 +1,7 @@
 (function() {
     
     let goToSignInPage = () => {
-      console.log($('signIn').click);
-      $('signIn').click();
+      window.location.replace('https://www.reserveamerica.com/memberSignInSignUp.do');
     };
     
     let login = () => {
