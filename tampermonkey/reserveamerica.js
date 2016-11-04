@@ -8,7 +8,7 @@
         if ($('#myaccountlink').length != 0) {
             console.log('Logged in');
             window.location.href = 'http://www.reserveamerica.com/switchBookingAction.do?contractCode=CA&parkId=120063&siteId=390&camparea=52762255&selStatus=null&matrixHasError=true&dateToday=03%2F30%2F2017%C2%A4tMaximumWindow=12&dateMinWindow=11%2F04%2F2016&dateMaxWindow=11%2F02%2F2017&arvdate=03%2F30%2F2017&arrivaldate=Thu+Mar+30+2017&lengthOfStay=1&dateChosen=true';
-        } else if ($('submitForm_submitForm').length != 0) {
+        } else if ($('#submitForm_submitForm').length != 0) {
             console.log('Start to login...');
             $('#combinedFlowSignInKit_emailGroup_attrs input')[0].value = USER_NAME;
             $('#passwrdGroup input')[0].value = PASSWORD;
