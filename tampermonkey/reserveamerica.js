@@ -35,9 +35,8 @@
         console.log(url);
         if (url.endsWith('memberSignInSignUp.do')) {
           console.log(url);
-          setTimeout(f, 'login');
+          setTimeout(login, 2000);
         } else if (url.endsWith('welcome.do')) {
-          setTimeout(f, 'goToSignInPage');
           goToSignInPage();
         }
     };
