@@ -37,7 +37,7 @@
         console.log(url);
         if (url.indexOf('memberSignInSignUp.do') >= 0) {
           setTimeout(login, 2000);
-        } else if (url.indexOf('welcome.do') >= 0) {
+        } else if (url.indexOf('welcome.do') >= 0 || url.endsWith('/') {
           goToSignInPage();
         }
     };
