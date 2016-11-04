@@ -34,9 +34,10 @@
         const url = window.location.href;
         console.log(url);
         if (url.endsWith('memberSignInSignUp.do')) {
-          console.log(url);
+          console.log('memberSignInSignUp');
           setTimeout(login, 2000);
         } else if (url.endsWith('welcome.do')) {
+          console.log('welcome');
           goToSignInPage();
         }
     };
