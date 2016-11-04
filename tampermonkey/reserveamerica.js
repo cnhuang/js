@@ -1,7 +1,9 @@
 (function() {
+    
     let goToSignInPage = () => {
       $('signIn').click();
     };
+    
     let login = () => {
         if ($('progresspopup') && $('progresspopup').style.display == 'none') {
             $('AemailGroup_1733152645').value = 'cnhuang@gmail.com';
@@ -12,10 +14,30 @@
         }
     };
     
-    const url = window.location.href;
-    if (url.endWith('memberSignInSignUp.do') {
-      setTimeout(f, login);
-    } else if (url.endWith('welcome.do')) {
-      goToSignInPage();
-    }
+    let loadJquery = (callback) => {
+        // Adding the script tag to the head as suggested before
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'http://code.jquery.com/jquery-latest.js?' + (new Date()).toISOString();;
+
+        // Then bind the event to the callback function.
+        // There are several events for cross browser compatibility.
+        script.onreadystatechange = callback;
+        script.onload = callback;
+
+        // Fire the loading
+        head.appendChild(script);
+    };
+    
+    let main = () => {
+        const url = window.location.href;
+        if (url.endWith('memberSignInSignUp.do') {
+          setTimeout(f, login);
+        } else if (url.endWith('welcome.do')) {
+          goToSignInPage();
+        }
+    };
+ 
+    loadJquery(main);
 })();
