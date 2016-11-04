@@ -32,9 +32,9 @@
     
     let main = () => {
         const url = window.location.href;
-        if (url.endWith('memberSignInSignUp.do')) {
+        if (url.endsWith('memberSignInSignUp.do')) {
           setTimeout(f, login);
-        } else if (url.endWith('welcome.do')) {
+        } else if (url.endsWith('welcome.do')) {
           goToSignInPage();
         }
     };
