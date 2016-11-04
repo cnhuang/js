@@ -19,7 +19,7 @@
         var head = document.getElementsByTagName('head')[0];
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = 'http://code.jquery.com/jquery-latest.js?' + (new Date()).toISOString();;
+        script.src = 'http://code.jquery.com/jquery-latest.js?' + (new Date()).toISOString();
 
         // Then bind the event to the callback function.
         // There are several events for cross browser compatibility.
