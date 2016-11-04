@@ -33,10 +33,10 @@
     let main = () => {
         const url = window.location.href;
         console.log(url);
-        if (url.endsWith('memberSignInSignUp.do')) {
+        if (url.indexOf('memberSignInSignUp.do') >= 0) {
           console.log('memberSignInSignUp');
           setTimeout(login, 2000);
-        } else if (url.endsWith('welcome.do')) {
+        } else if (url.indexOf('welcome.do') >= 0) {
           console.log('welcome');
           goToSignInPage();
         }
