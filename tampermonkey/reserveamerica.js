@@ -16,20 +16,11 @@
         }
     };
     
-    let loadJquery = (callback) => {
-        // Adding the script tag to the head as suggested before
-        var head = document.getElementsByTagName('head')[0];
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'http://code.jquery.com/jquery-latest.js?' + (new Date()).toISOString();
-
-        // Then bind the event to the callback function.
-        // There are several events for cross browser compatibility.
-        script.onreadystatechange = callback;
-        script.onload = callback;
-
-        // Fire the loading
-        head.appendChild(script);
+    let fillReservationForm = () => {
+        $('#numoccupants').value = NUM_OCCUPANTS || 0;
+        $('#numvehicles').value = NUM_VEHICLES || 0;
+        $('#agreement').checked = true;
+        $('#continueshop').click();
     };
     
     let main = () => {
@@ -39,9 +30,10 @@
           setTimeout(login, 2000);
         } else if (url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
           goToSignInPage();
+        } else if (url.indexOf('reservationDetails.do')) {
         }
+        
     };
- 
-    //loadJquery(main);
+    
     main();
 })();
