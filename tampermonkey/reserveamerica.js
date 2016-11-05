@@ -21,7 +21,7 @@
         $('#numoccupants')[0].value = NUM_OCCUPANTS;
         $('#numvehicles')[0].value = NUM_VEHICLES;
         $('#agreement')[0].checked = true;
-        //$('#continueshop').click();
+        $('#continueshop').click();
     };
     
     let main = () => {
