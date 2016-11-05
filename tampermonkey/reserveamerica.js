@@ -33,6 +33,8 @@
             goToSignInPage();
         } else if (url.indexOf(CAMP_URL)) {
             $('#btnbookdates')[0].click();
+        } else if (url.indexOf('reservationDetails.do')) {
+            fillReservationForm();
         }
         
     };
