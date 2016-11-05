@@ -18,8 +18,8 @@
     
     let fillReservationForm = () => {
         console.log(`Fill form with ${NUM_OCCUPANTS} occupants and ${NUM_VEHICLES} vehicles`);
-        $('#numoccupants').value = NUM_OCCUPANTS;
-        $('#numvehicles').value = NUM_VEHICLES;
+        $('#numoccupants')[0].value = NUM_OCCUPANTS;
+        $('#numvehicles')[0].value = NUM_VEHICLES;
         $('#agreement').checked = true;
         //$('#continueshop').click();
     };
