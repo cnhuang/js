@@ -20,7 +20,7 @@
         console.log(`Fill form with ${NUM_OCCUPANTS} occupants and ${NUM_VEHICLES} vehicles`);
         $('#numoccupants')[0].value = NUM_OCCUPANTS;
         $('#numvehicles')[0].value = NUM_VEHICLES;
-        $('#agreement').checked = true;
+        $('#agreement')[0].checked = true;
         //$('#continueshop').click();
     };
     
