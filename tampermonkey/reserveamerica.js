@@ -9,7 +9,7 @@
             console.log('Redirect to camp session url: ' + CAMP_URL);
             window.location.href = CAMP_URL;
         } else if ($('#submitForm_submitForm').length != 0) {
-            console.log('Start to login...');
+            console.log(`Start to login with ${USER_NAME}/${PASSWORD}`);
             $('#combinedFlowSignInKit_emailGroup_attrs input')[0].value = USER_NAME;
             $('#passwrdGroup input')[0].value = PASSWORD;
             $('#submitForm_submitForm').click();
@@ -36,6 +36,9 @@
         }
         
     };
-    
+    USER_NAME = USER_NAME || '';
+    PASSWORD = PASSWORD || '';
+    NUM_OCCUPANTS = NUM_OCCUPANTS || 0;
+    NUM_VEHICLES = NUM_VEHICLES || 0;
     main();
 })();
