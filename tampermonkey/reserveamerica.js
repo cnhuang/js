@@ -36,9 +36,5 @@
         }
         
     };
-    USER_NAME = USER_NAME || '';
-    PASSWORD = PASSWORD || '';
-    NUM_OCCUPANTS = NUM_OCCUPANTS || 0;
-    NUM_VEHICLES = NUM_VEHICLES || 0;
     main();
 })();
