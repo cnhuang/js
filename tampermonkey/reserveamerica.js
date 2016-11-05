@@ -27,11 +27,12 @@
     let main = () => {
         const url = window.location.href;
         console.log(url);
+        console.log(url == CAMP_URL);
         if (url.indexOf('memberSignInSignUp.do') >= 0) {
             setTimeout(login, 2000);
         } else if (url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
             goToSignInPage();
-        } else if (url.indexOf(CAMP_URL)) {
+        } else if (url == CAMP_URL) {
             console.log('select date');
             setTimeout(() => {$('#btnbookdates')[0].click();}, 2000);
         } else if (url.indexOf('reservationDetails.do')) {
