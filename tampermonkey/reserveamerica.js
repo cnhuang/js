@@ -17,8 +17,9 @@
     };
     
     let fillReservationForm = () => {
-        $('#numoccupants').value = NUM_OCCUPANTS || 0;
-        $('#numvehicles').value = NUM_VEHICLES || 0;
+        console.log(`Fill form with ${NUM_OCCUPANTS} occupants and ${NUM_VEHICLES} vehicles`);
+        $('#numoccupants').value = NUM_OCCUPANTS;
+        $('#numvehicles').value = NUM_VEHICLES;
         $('#agreement').checked = true;
         $('#continueshop').click();
     };
@@ -27,10 +28,11 @@
         const url = window.location.href;
         console.log(url);
         if (url.indexOf('memberSignInSignUp.do') >= 0) {
-          setTimeout(login, 2000);
+            setTimeout(login, 2000);
         } else if (url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
-          goToSignInPage();
+            goToSignInPage();
         } else if (url.indexOf('reservationDetails.do')) {
+            fillReservationForm();
         }
         
     };
