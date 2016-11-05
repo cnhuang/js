@@ -34,9 +34,9 @@
             window.location.href = CAMP_URL;
         } else if (url == CAMP_URL) {
             console.log('select date');
-            //setTimeout(() => {$('#btnbookdates')[0].click();}, 2000);
+            setTimeout(() => {$('#btnbookdates')[0].click();}, 2000);
         } else if (url.indexOf('reservationDetails.do')) {
-            //fillReservationForm();
+            setTimeout(fillReservationForm, 2000);
         }
         
     };
