@@ -5,15 +5,10 @@
     };
     
     let login = () => {
-        if ($('#myaccountlink').length != 0) {
-            console.log('Redirect to camp session url: ' + CAMP_URL);
-            window.location.href = CAMP_URL;
-        } else if ($('#submitForm_submitForm').length != 0) {
-            console.log(`Start to login with ${USER_NAME}/${PASSWORD}`);
-            $('#combinedFlowSignInKit_emailGroup_attrs input')[0].value = USER_NAME;
-            $('#passwrdGroup input')[0].value = PASSWORD;
-            $('#submitForm_submitForm').click();
-        }
+        console.log(`Start to login with ${USER_NAME}/${PASSWORD}`);
+        $('#combinedFlowSignInKit_emailGroup_attrs input')[0].value = USER_NAME;
+        $('#passwrdGroup input')[0].value = PASSWORD;
+        $('#submitForm_submitForm').click();
     };
     
     let fillReservationForm = () => {
@@ -26,8 +21,16 @@
     
     let main = () => {
         const url = window.location.href;
-        console.log(url);
-        console.log(url == CAMP_URL);
+        
+        if ($('#myAccount').length != 0 || url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
+            console.log('Redirect to camp session url: ' + CAMP_URL);
+            window.location.href = CAMP_URL;
+        } else if ($('#submitForm_submitForm').length != 0) {
+            login();
+        }
+        
+        
+        /*
         if (url.indexOf('memberSignInSignUp.do') >= 0) {
             setTimeout(login, 2000);
         } else if (url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
@@ -39,6 +42,7 @@
         } else if (url.indexOf('reservationDetails.do')) {
             setTimeout(fillReservationForm, 2000);
         }
+        */
         
     };
     main();
