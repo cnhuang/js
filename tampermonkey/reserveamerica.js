@@ -36,7 +36,7 @@
             console.log('select date');
             setTimeout(() => {$('#btnbookdates')[0].click();}, 2000);
         } else if (url.indexOf('reservationDetails.do')) {
-            fillReservationForm();
+            //fillReservationForm();
         }
         
     };
