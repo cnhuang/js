@@ -31,7 +31,7 @@
         if (url.indexOf('memberSignInSignUp.do') >= 0) {
             setTimeout(login, 2000);
         } else if (url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
-            goToSignInPage();
+            window.location.href = CAMP_URL;
         } else if (url == CAMP_URL) {
             console.log('select date');
             //setTimeout(() => {$('#btnbookdates')[0].click();}, 2000);
