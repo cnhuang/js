@@ -24,13 +24,21 @@
     };
     
     let purchase = () => {
+        console.log(`set CARD_TYPE = ${CARD_TYPE}`);
         getId('cardTypeId_1').value = CARD_TYPE;
+        console.log(`set CARD_NUMBER = ${CARD_NUMBER}`);
         getId('cardnum_1').value = CARD_NUMBER;
+        console.log(`set CARD_EXP_MONTH = ${CARD_EXP_MONTH}`);
         getId('expmonth_1').value = CARD_EXP_MONTH;
+        console.log(`set CARD_EXP_YEAR = ${CARD_EXP_YEAR}`);
         getId('expyear_1').value = CARD_EXP_YEAR;
+        console.log(`set FIRST_NAME = ${FIRST_NAME}`);
         getId('fname_1').value = FIRST_NAME;
+        console.log(`set LAST_NAME = ${LAST_NAME}`);
         getId('lname_1').value = LAST_NAME;
+        console.log(`set Acknowlegdement = true`);
         getId('ackacc').checked = true;
+        console.log(`check out`);
         getId('chkout').click();
     };
     
