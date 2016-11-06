@@ -4,9 +4,9 @@
         return getElem(`#${id}`);
     };
     
-    let getElem = (selector) {
+    let getElem = (selector) =>  {
         return $(selector).length == 0 ? null : $(selector)[0];
-    }
+    };
     
     let goToSignInPage = () => {
       window.location.href = 'https://www.reserveamerica.com/memberSignInSignUp.do';
