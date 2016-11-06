@@ -1,5 +1,9 @@
 (function() {
     
+    let getId = (id) => {
+        $(`#${id}`) .length == 0 ? null : $(`#${id}`)[1];
+    };
+    
     let goToSignInPage = () => {
       window.location.href = 'https://www.reserveamerica.com/memberSignInSignUp.do';
     };
@@ -22,12 +26,13 @@
     let main = () => {
         const url = window.location.href;
         
-        if ($('#myAccount').length != 0 || url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
+        if (getId('myAccount') || url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
             console.log('Redirect to camp session url: ' + CAMP_URL);
             window.location.href = CAMP_URL;
-        } else if ($('#submitForm_submitForm').length != 0) {
+        } else if (getId('submitForm_submitForm')) {
             login();
-        } else if (true) {
+        } else if (getId('btnbookdates')) {
+            getId('btnbookdates').click();
         }
         
         
