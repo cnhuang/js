@@ -36,6 +36,8 @@
             getId('btnbookdates').click();
         } else if (getId('continueshop')) {
             fillReservationForm();
+        } else if (getId('chkout')) {
+            getId('chkout').click();
         }
         
         
