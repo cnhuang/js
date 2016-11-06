@@ -1,8 +1,12 @@
 (function() {
     
     let getId = (id) => {
-        return $(`#${id}`).length == 0 ? null : $(`#${id}`)[0];
+        return getElem(`#${id}`);
     };
+    
+    let getElem = (selector) {
+        return $(selector).length == 0 ? null : $(selector)[0];
+    }
     
     let goToSignInPage = () => {
       window.location.href = 'https://www.reserveamerica.com/memberSignInSignUp.do';
@@ -24,6 +28,9 @@
     };
     
     let purchase = () => {
+        if (getElem('div.msg.topofpage.erro')) {
+            return;
+        }
         console.log(`set CARD_TYPE = ${CARD_TYPE}`);
         getId('cardTypeId_1').value = CARD_TYPE;
         console.log(`set CARD_NUMBER = ${CARD_NUMBER}`);
