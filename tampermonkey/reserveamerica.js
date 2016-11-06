@@ -16,7 +16,7 @@
         $('#numoccupants')[0].value = NUM_OCCUPANTS;
         $('#numvehicles')[0].value = NUM_VEHICLES;
         $('#agreement')[0].checked = true;
-        //$('#continueshop')[0].click();
+        $('#continueshop')[0].click();
     };
     
     let main = () => {
@@ -27,6 +27,7 @@
             window.location.href = CAMP_URL;
         } else if ($('#submitForm_submitForm').length != 0) {
             login();
+        } else if () {
         }
         
         
