@@ -55,7 +55,7 @@
             getId('btnbookdates').click();
         } else if (getId('numoccupants')) {
             fillReservationForm();
-        } else if (getId('chkout')) {
+        } else if (getId('removeitem')) {
             console.log('check out');
             getId('chkout').click();
         } else if (getId('cardnum_1')) {
