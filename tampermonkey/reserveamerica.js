@@ -32,6 +32,7 @@
         } else if (getId('submitForm_submitForm')) {
             login();
         } else if (getId('btnbookdates')) {
+            console.log('book date');
             getId('btnbookdates').click();
         }
         
