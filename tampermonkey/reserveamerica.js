@@ -34,7 +34,7 @@
         } else if (getId('btnbookdates')) {
             console.log('book date');
             getId('btnbookdates').click();
-        } eles if (getId('continueshop')) {
+        } else if (getId('continueshop')) {
             fillReservationForm();
         }
         
