@@ -1,6 +1,7 @@
 (function() {
     
     let getId = (id) => {
+        console.log($(`#${id}`));
         return $(`#${id}`) .length == 0 ? null : $(`#${id}`)[1];
     };
     
