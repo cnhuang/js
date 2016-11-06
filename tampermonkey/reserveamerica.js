@@ -30,7 +30,7 @@
             console.log('Redirect to camp session url: ' + CAMP_URL);
             window.location.href = CAMP_URL;
         } else if (getId('submitForm_submitForm')) {
-            login();
+            setTimeout(login(), 2000);
         } else if (getId('btnbookdates')) {
             console.log('book date');
             getId('btnbookdates').click();
