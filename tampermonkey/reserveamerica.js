@@ -28,7 +28,7 @@
     };
     
     let purchase = () => {
-        if (getElem('div.msg.topofpage.erro')) {
+        if (getElem('div.msg.topofpage.error')) {
             return;
         }
         console.log(`set CARD_TYPE = ${CARD_TYPE}`);
