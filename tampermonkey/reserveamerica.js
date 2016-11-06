@@ -53,7 +53,7 @@
         } else if (getId('btnbookdates')) {
             console.log('book date');
             getId('btnbookdates').click();
-        } else if (getId('continueshop')) {
+        } else if (getId('numoccupants')) {
             fillReservationForm();
         } else if (getId('chkout')) {
             console.log('check out');
@@ -61,22 +61,6 @@
         } else if (getId('cardnum_1')) {
             purchase();
         }
-        
-        
-        /*
-        if (url.indexOf('memberSignInSignUp.do') >= 0) {
-            setTimeout(login, 2000);
-        } else if (url.indexOf('welcome.do') >= 0 || url.endsWith('/')) {
-            window.location.href = CAMP_URL;
-            //goToSignInPage();
-        } else if (url == CAMP_URL) {
-            console.log('select date');
-            //setTimeout(() => {$('#btnbookdates')[0].click();}, 2000);
-        } else if (url.indexOf('reservationDetails.do')) {
-            setTimeout(fillReservationForm, 2000);
-        }
-        */
-        
     };
     main();
 })();
