@@ -23,6 +23,17 @@
         getId('continueshop').click();
     };
     
+    let purchase = () => {
+        getId('cardTypeId_1').value = CARD_TYPE;
+        getId('cardnum_1').value = CARD_NUMBER;
+        getId('expmonth_1').value = CARD_EXP_MONTH;
+        getId('expyear_1').value = CARD_EXP_YEAR;
+        getId('fname_1').value = FIRST_NAME;
+        getId('lname_1').value = LAST_NAME;
+        getId('ackacc').checked = true;
+        getId('chkout').click();
+    };
+    
     let main = () => {
         const url = window.location.href;
         
@@ -37,7 +48,10 @@
         } else if (getId('continueshop')) {
             fillReservationForm();
         } else if (getId('chkout')) {
+            console.log('check out');
             getId('chkout').click();
+        } else if (getId('cardnum_1')) {
+            purchase();
         }
         
         
