@@ -1,7 +1,7 @@
 (function() {
     
     let getId = (id) => {
-        return $(`#${id}`) .length == 0 ? null : $(`#${id}`)[1];
+        return $(`#${id}`).length == 0 ? null : $(`#${id}`)[0];
     };
     
     let goToSignInPage = () => {
