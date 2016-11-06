@@ -27,7 +27,7 @@
             window.location.href = CAMP_URL;
         } else if ($('#submitForm_submitForm').length != 0) {
             login();
-        } else if () {
+        } else if (true) {
         }
         
         
