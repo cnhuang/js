@@ -10,17 +10,17 @@
     
     let login = () => {
         console.log(`Start to login with ${USER_NAME}/${PASSWORD}`);
-        $('#combinedFlowSignInKit_emailGroup_attrs input')[0].value = USER_NAME;
-        $('#passwrdGroup input')[0].value = PASSWORD;
-        $('#submitForm_submitForm').click();
+        getId('combinedFlowSignInKit_emailGroup_attrs input').value = USER_NAME;
+        getId('passwrdGroup input').value = PASSWORD;
+        getId('submitForm_submitForm').click();
     };
     
     let fillReservationForm = () => {
         console.log(`Fill form with ${NUM_OCCUPANTS} occupants and ${NUM_VEHICLES} vehicles`);
-        $('#numoccupants')[0].value = NUM_OCCUPANTS;
-        $('#numvehicles')[0].value = NUM_VEHICLES;
-        $('#agreement')[0].checked = true;
-        $('#continueshop')[0].click();
+        getId('numoccupants').value = NUM_OCCUPANTS;
+        getId('numvehicles').value = NUM_VEHICLES;
+        getId('agreement').checked = true;
+        getId('continueshop').click();
     };
     
     let main = () => {
@@ -34,6 +34,8 @@
         } else if (getId('btnbookdates')) {
             console.log('book date');
             getId('btnbookdates').click();
+        } eles if (getId('continueshop')) {
+            fillReservationForm();
         }
         
         
