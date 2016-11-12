@@ -31,7 +31,7 @@ var util = new myUtil();
 var tvSeries = [
 {id: "67551", done: 0, name: "Elementary V"},
 {id: "67571", done: 0, name: "scopin III"},
-{id: "67402", name: "Black list IV", done: 2},
+{id: "67402", name: "Black list IV", done: 4},
 {id: "67358", done: 6, name: "shield IV"},
 {id: "67286", name: "Blind spot II", done: 7},
 {id: "59887", done: 18, name: '美国恐怖故事：畸形秀'},
