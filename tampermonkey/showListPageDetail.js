@@ -79,7 +79,7 @@ class MyTw116 {
     }
 
 
-    parseData(parentDiv, tv, url, content) {  
+    parseTvData(parentDiv, tv, url, content) {  
         const url_list = content.match(/var\s+url_list.*?;/);
         const players = decodeURIComponent(url_list).split('$$$');
         const unWatched = [];
