@@ -19,24 +19,24 @@ Util.loadScript = (url, callback) => {
 };
 
 Util.loadJQuery = (callback) => {
-    loadScript('http://code.jquery.com/jquery-latest.js', callback);
+    Util.loadScript('http://code.jquery.com/jquery-latest.js', callback);
 };
 
 
 class MyTw116 {
 
     constructor(tvData){
-        this.parentDiv = addParentDiv();
-        this.tabContainer = addEmptyElement(this.parentDiv);
+        this.parentDiv = this.addParentDiv();
+        this.tabContainer = this.addEmptyElement(this.parentDiv);
         this.tvData = tvData;
         this.loadTvTab();
     }
 
     loadTvTab() {
-        this.tvTab = addEmptyElement(this.parentDiv);
+        this.tvTab = this.addEmptyElement(this.parentDiv);
         this.tvTab.style = {marginBottom: '20px', marginRight: '20px'};
         this.tvTab.innerText = 'TV';
-        this.tvContent = addEmptyElement(this.parentDiv);
+        this.tvContent = this.addEmptyElement(this.parentDiv);
         this.loadTvData(tvContent);
     }
 
@@ -70,7 +70,7 @@ class MyTw116 {
         return div;
     };
 
-    static addEmptyElement(parent, append = true, tag = 'div') {
+    addEmptyElement(parent, append = true, tag = 'div') {
         var d = document.createElement(tag);
         if (append) {
             parent.appendChild(d);
@@ -103,7 +103,7 @@ class MyTw116 {
         unWatched.forEach((e) => {
             html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
         });
-        var d = addEmptyElement(parentDiv);
+        var d = this.addEmptyElement(parentDiv);
         d.innerHTML = html;
         d.style.marginBottom = '20px';
     }
