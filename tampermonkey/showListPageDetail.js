@@ -86,7 +86,7 @@ class MyTw116 {
         console.log(players);
 
         if (players) {
-            const player = players.find((p) => player.contains('xfplay://')) || '';
+            const player = players.find((p) => p.contains('xfplay://')) || '';
             const links = player.split('+++') || [];
             links.forEach((link, index) => {
                 if (tv.done && tv.done > index) return;
