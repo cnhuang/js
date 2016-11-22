@@ -37,7 +37,7 @@ class MyTw116 {
         this.tvTab.style = {marginBottom: '20px', marginRight: '20px'};
         this.tvTab.innerText = 'TV';
         this.tvContent = this.addEmptyElement(this.parentDiv);
-        this.loadTvData(tvContent);
+        this.loadTvData(this.tvContent);
     }
 
 
