@@ -81,7 +81,6 @@ class MyTw116 {
 
     parseData(parentDiv, tv, url, content) {  
         const url_list = content.match(/var\s+url_list.*?;/);
-        let html = '';
         const players = decodeURIComponent(url_list).split('$$$');
         const unWatched = [];
         console.log(players);
@@ -92,21 +91,18 @@ class MyTw116 {
             links.forEach((link, index) => {
                 if (tv.done && tv.done > index) return;
 
-                const tokens = links[j].split('++');
+                const tokens = link.split('++');
                 const name = tokens[0];
-                const link = tokens[1];
+                const url = tokens[1];
                 const id = `${tv.id}-${index}`;
-                unWatched.push({name, link, id});
+                unWatched.push({name, url, id});
             });
         }
 
         let html = `<div><a target=_blank href='${url}'>${tv.name} (${tv.id}, watched: ${tv.done})</a></div>`;
         unWatched.forEach((e) => {
-            html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.link}">${e.name}</a></span>`;
+            html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
         });
-        if (unWatched.length == 0) {
-            let html = `<div><a target=_blank href='${url}'>${tv.name} (${tv.id}, watched: ${tv.done})</a></div>`;
-        }
         var d = addEmptyElement(parentDiv);
         d.innerHTML = html;
         d.style.marginBottom = '20px';
