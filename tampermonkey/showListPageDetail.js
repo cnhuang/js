@@ -51,9 +51,9 @@ class MyTw116 {
         };
 
         this.tvData.forEach((data, index) =>{
-            const url = `http://www.tw116.com/vod-play-id-${data[index].id}-sid-0-pid-0.html`;
-            $.get(url, successCallback(tvSeries[i], url, parentDiv))
-                .fail(failCallabck(tvSeries[i], url, parentDiv));
+            const url = `http://www.tw116.com/vod-play-id-${data.id}-sid-0-pid-0.html`;
+            $.get(url, successCallback(data, url, parentDiv))
+                .fail(failCallabck(data, url, parentDiv));
         });
     }
 
