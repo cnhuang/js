@@ -19,7 +19,7 @@ Util.loadScript = (url, callback) => {
 };
 
 Util.loadJQuery = (callback) => {
-    this.loadScript('http://code.jquery.com/jquery-latest.js', callback);
+    loadScript('http://code.jquery.com/jquery-latest.js', callback);
 };
 
 
