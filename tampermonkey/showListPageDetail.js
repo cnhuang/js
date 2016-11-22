@@ -99,6 +99,12 @@ class MyTw116 {
             });
         }
 
+        let tvName = tv.name || (() => {
+              if (unWatched.length == 0)
+                  return undefined;
+              else 
+                  return /mz=(.*?)S/.exec(unWatched[0].url);
+            })();
         let html = `<div><a target=_blank href='${url}'>${tv.name} (${tv.id}, watched: ${tv.done})</a></div>`;
         unWatched.forEach((e) => {
             html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
