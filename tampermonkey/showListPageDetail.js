@@ -38,9 +38,10 @@ Util.getNewElement = (style = {}) => {
 // MyTw116
 class MyTw116 {
 
-  constructor(element, tvData){
+  constructor(element, tvData, movieData){
     this.element = element;
     this.tvData = tvData;
+    this.movieData = movieData;
     this.tabs = {};
     
     this.parentDiv = this.addParentDiv();
@@ -55,7 +56,7 @@ class MyTw116 {
   loadMovieTab() {
     const tab = this.addTab('Movies');
     const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    //this.loadTvData(content);
+    this.loadData(content, this.parseTvData, this.movieData);
     this.tabs['movie'] = content;
     tab.onclick = () => this.openTab('movie');    
     return tab;
@@ -111,12 +112,12 @@ class MyTw116 {
   
   // Utility
   loadData(element, parseFunc, data) {
-    const successCallback = (tv, url, parentDiv, content) => {
-      parseFunc(parentDiv, tv, url, content);
+    const successCallback = (d, url, parentDiv, content) => {
+      parseFunc(parentDiv, d, url, content);
     };
 
-    const failCallabck = (tv, url, parentDiv) => {
-      console.log(`Error: ${tv}`);
+    const failCallabck = (d, url, parentDiv) => {
+      console.log(`Error: ${d}`);
     };
 
     data.forEach((d, index) =>{
@@ -200,4 +201,4 @@ const movies = [
   {id: "66111"}
 ];
 // Main function
-Util.loadJQuery(() => new MyTw116(document.getElementsByTagName('body')[0], tvSeries));
+Util.loadJQuery(() => new MyTw116(document.getElementsByTagName('body')[0], tvSeries, movies));
