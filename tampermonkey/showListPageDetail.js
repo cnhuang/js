@@ -21,6 +21,18 @@ Util.loadJQuery = (callback) => {
   Util.loadScript('http://code.jquery.com/jquery-latest.js', callback);
 };
 
+Util.appendNewElement = (parent, style) => {
+  const d = Util.getNewElement();
+  parent.appendChild(d);
+  for (let k in style) {
+    d.style[k] = style[k];
+  }
+  return d;
+};
+
+Util.getNewElement = () => {
+  return document.createElement('div');
+};
 
 // MyTw116
 class MyTw116 {
@@ -31,8 +43,8 @@ class MyTw116 {
     this.tabs = {};
     
     this.parentDiv = this.addParentDiv();
-    this.headerContainer = this.addEmptyElement(this.parentDiv);
-    this.bodyContainer = this.addEmptyElement(this.parentDiv);
+    this.headerContainer = Util.appendNewElement(this.parentDiv);
+    this.bodyContainer = Util.appendNewElement(this.parentDiv);
     
     this.loadTvTab();
     this.loadMovieTab();
@@ -108,14 +120,14 @@ class MyTw116 {
     unWatched.forEach((e) => {
       html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
     });
-    var d = this.addEmptyElement(parentDiv);
+    var d = Util.appendNewElement(parentDiv);
     d.innerHTML = html;
     d.style.marginBottom = '20px';
   }
   
   // Utility
   addTab(innerText) {
-    let tab = this.addEmptyElement(this.headerContainer);
+    let tab = Util.appendNewElement(this.headerContainer);
     tab.style.cursor = 'pointer';
     tab.style.marginBottom = '20px';
     tab.style.marginRight = '20px';
@@ -136,7 +148,7 @@ class MyTw116 {
   }
 
   addParentDiv() {
-    var div = document.createElement("div");
+    var div = Util.getNewElement();
     div.id = 'linksDiv';
     div.style.backgroundColor = 'black';
     div.style.top = '0px';
@@ -148,14 +160,6 @@ class MyTw116 {
       this.element.appendChild(div);
     }
     return div;
-  }
-
-  addEmptyElement(parent, append = true, tag = 'div') {
-    var d = document.createElement(tag);
-    if (append) {
-      parent.appendChild(d);
-    }
-    return d;
   }
 };
 
