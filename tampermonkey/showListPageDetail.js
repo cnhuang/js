@@ -56,7 +56,7 @@ class MyTw116 {
   loadMovieTab() {
     const tab = this.addTab('Movies');
     const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    this.loadData(content, this.parseTvData, this.movieData);
+    //this.loadData(content, this.parseTvData, this.movieData);
     this.tabs['movie'] = content;
     tab.onclick = () => this.openTab('movie');    
     return tab;
@@ -64,15 +64,29 @@ class MyTw116 {
 
   // TV Tab
   loadTvTab() {
+    const render = (tv, url, all, unWatched) => {      
+      const tvName = tv.name || (() => {
+        if (all.length == 0)
+          return 'Unknown';
+        else 
+          return /mz=(.*?)S/.exec(all[0].url) || `Can't parse from ${all[0].url}`;
+      })();
+
+      let html = `<div><a target=_blank href='${url}'>${tvName} (${tv.id}, watched: ${tv.done || 0})</a></div>`;
+      unWatched.forEach((e) => {
+        html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
+      });
+      return html;
+    };
     const tab = this.addTab('TV');
     const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    this.loadData(content, this.parseTvData, this.tvData);
+    this.loadData(content, this.parseTvData, this.tvData, render);
     this.tabs['tv'] = content;
     tab.onclick = () => this.openTab('tv');      
     return tab; 
   }
   
-  parseTvData(parentDiv, tv, url, content) {  
+  parseTvData(parentDiv, tv, url, content, render) {  
     const url_list = content.match(/var\s+url_list.*?;/);
     const players = decodeURIComponent(url_list).split('$$$');
     const unWatched = [];
@@ -95,25 +109,14 @@ class MyTw116 {
       });
     }
 
-    const tvName = tv.name || (() => {
-      if (all.length == 0)
-        return 'Unknown';
-      else 
-        return /mz=(.*?)S/.exec(all[0].url) || `Can't parse from ${all[0].url}`;
-    })();
-    
-    let html = `<div><a target=_blank href='${url}'>${tvName} (${tv.id}, watched: ${tv.done || 0})</a></div>`;
-    unWatched.forEach((e) => {
-      html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
-    });
     var d = Util.appendNewElement(parentDiv, {marginBottom: '20px'});
-    d.innerHTML = html;
+    d.innerHTML = render(tv, url, all, unWatched);
   }
   
   // Utility
-  loadData(element, parseFunc, data) {
-    const successCallback = (d, url, parentDiv, content) => {
-      parseFunc(parentDiv, d, url, content);
+  loadData(element, parseFunc, data, render) {
+    const successCallback = (d, url, parentDiv, content, render) => {
+      parseFunc(parentDiv, d, url, content, render);
     };
 
     const failCallabck = (d, url, parentDiv) => {
@@ -122,7 +125,7 @@ class MyTw116 {
 
     data.forEach((d, index) =>{
       const url = `http://www.tw116.com/vod-play-id-${d.id}-sid-0-pid-0.html`;
-      $.get(url, successCallback.bind(this, d, url, element))
+      $.get(url, successCallback.bind(this, d, url, element, render))
         .fail(failCallabck(d, url, element));
     });
   }
