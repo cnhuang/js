@@ -25,7 +25,8 @@ Util.loadJQuery = (callback) => {
 
 class MyTw116 {
 
-    constructor(tvData){
+    constructor(element, tvData){
+        this.element = element;
         this.parentDiv = this.addParentDiv();
         this.tabContainer = this.addEmptyElement(this.parentDiv);
         this.tvData = tvData;
@@ -65,10 +66,11 @@ class MyTw116 {
         div.style.top = '0px';
         div.style.padding = '40px';
         div.style.width = '100%';
-        const body = document.getElementsByTagName('body')[0];
-        body.insertBefore(div, body.children[0]);
-        //document.getElementsByTagName('body')[0].appendChild(div);
-        //div.innerHTML = '';
+        if (this.element.children && this.element.children.length > 0) {
+            this.element.children.insertBefore(div, this.element.children[0]);
+        } else {
+            this.element.children.appendChild(div);
+        }
         return div;
     };
 
@@ -149,4 +151,4 @@ var tvSeries = [
 ];
 
 
-Util.loadJQuery(() => new MyTw116(tvSeries));
+Util.loadJQuery(() => new MyTw116(document.getElementsByTagName('body')[0], tvSeries));
