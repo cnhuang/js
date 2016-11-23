@@ -58,15 +58,17 @@ class MyTw116 {
     //this.loadTvData(content);
     this.tabs['movie'] = content;
     tab.onclick = () => this.openTab('movie');    
+    return tab;
   }
 
   // TV Tab
   loadTvTab() {
     const tab = this.addTab('TV');
-    const content = Util.appendNewElement(this.bodyContainer);
+    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
     this.loadTvData(content);
     this.tabs['tv'] = content;
-    tab.onclick = () => this.openTab('tv');    
+    tab.onclick = () => this.openTab('tv');      
+    return tab; 
   }
   
   loadTvData(element) {
