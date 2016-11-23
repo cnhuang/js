@@ -15,7 +15,3 @@ var stringData = $.ajax({
                     async: false
                  }).responseText;
 eval(stringData);
-//var d = document.createElement("script");
-//d.setAttribute('type', 'application/javascript');
-//d.src = src;
-//document.getElementsByTagName('body')[0].appendChild(d);
