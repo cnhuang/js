@@ -65,8 +65,10 @@ class MyTw116 {
         div.style.top = '0px';
         div.style.padding = '40px';
         div.style.width = '100%';
-        document.getElementsByTagName('body')[0].appendChild(div);
-        div.innerHTML = '';
+        const children = document.getElementsByTagName('body')[0].children;
+        children.insertBefore(div, children);
+        //document.getElementsByTagName('body')[0].appendChild(div);
+        //div.innerHTML = '';
         return div;
     };
 
