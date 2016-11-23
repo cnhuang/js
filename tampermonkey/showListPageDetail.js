@@ -146,11 +146,11 @@ class MyTw116 {
 // End Utility
 
 var tvSeries = [
-    {id: "67551", done: 0, name: "Elementary V"},
-    {id: "67571", done: 0, name: "scopin III"},
+    {id: "67551", done: 1, name: "Elementary V"},
+    {id: "67571", done: 1, name: "scopin III"},
     {id: "67402", name: "Black list IV", done: 8},
     {id: "67358", done: 6, name: "shield IV"},
-    {id: "67286", name: "Blind spot II", done: 6},
+    {id: "67286", name: "Blind spot II", done: 8},
     {id: "59887", done: 18, name: '美国恐怖故事：畸形秀'},
     {id: "67505", name: "Luke Cage", done: 1},
     {id: "67567", name: "時空守衛 Timeless", done: 5},
