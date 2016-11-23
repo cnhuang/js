@@ -54,12 +54,21 @@ class MyTw116 {
   
   // Movie Tab
   loadMovieTab() {
-    const tab = this.addTab('Movies');
-    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    //this.loadData(content, this.parseData, this.movieData);
-    this.tabs['movie'] = content;
-    tab.onclick = () => this.openTab('movie');    
-    return tab;
+    const render = (tv, url, all, unWatched) => {      
+      const tvName = tv.name || (() => {
+        if (all.length == 0)
+          return 'Unknown';
+        else 
+          return /mz=(.*?)S/.exec(all[0].url) || `Can't parse from ${all[0].url}`;
+      })();
+
+      let html = `<div><a target=_blank href='${url}'>${tvName}</a></div>`;
+      unWatched.forEach((e) => {
+        html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
+      });
+      return html;
+    };
+    return this.addTab(this.movieData, render, 'movie', 'Movies');
   }
 
   // TV Tab
