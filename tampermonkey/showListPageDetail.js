@@ -111,27 +111,30 @@ class MyTw116 {
         const url_list = content.match(/var\s+url_list.*?;/);
         const players = decodeURIComponent(url_list).split('$$$');
         const unWatched = [];
+        const all = [];
         console.log(players);
 
         if (players) {
             const player = players.find((p) => p.includes('xfplay://')) || '';
             const links = player.split('+++') || [];
             links.forEach((link, index) => {
-                if (tv.done && tv.done > index) return;
-
                 const tokens = link.split('++');
                 const name = tokens[0];
                 const url = tokens[1];
                 const id = `${tv.id}-${index}`;
-                unWatched.push({name, url, id});
+                
+                if (!tv.done || tv.done <= index) {
+                    unWatched.push({name, url, id});
+                }
+                all.push({name, url, id});
             });
         }
 
         let tvName = tv.name || (() => {
-              if (unWatched.length == 0)
+              if (all.length == 0)
                   return 'Unknown';
               else 
-                  return /mz=(.*?)S/.exec(unWatched[0].url) || `Can't parse from ${unWatched[0].url}`;
+                  return /mz=(.*?)S/.exec(all[0].url) || `Can't parse from ${all[0].url}`;
             })();
         let html = `<div><a target=_blank href='${url}'>${tvName} (${tv.id}, watched: ${tv.done || 0})</a></div>`;
         unWatched.forEach((e) => {
