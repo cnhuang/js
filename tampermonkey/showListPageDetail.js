@@ -27,12 +27,14 @@ class MyTw116 {
 
     constructor(element, tvData){
         this.element = element;
+        this.tvData = tvData;
+        this.tabs = {};
+        
         this.parentDiv = this.addParentDiv();
         this.headerContainer = this.addEmptyElement(this.parentDiv);
         this.bodyContainer = this.addEmptyElement(this.parentDiv);
-        this.tvData = tvData;
+        
         this.loadTvTab();
-        this.tabs = {};
     }
 
     loadTvTab() {
