@@ -67,9 +67,9 @@ class MyTw116 {
         div.style.padding = '40px';
         div.style.width = '100%';
         if (this.element.children && this.element.children.length > 0) {
-            this.element.children.insertBefore(div, this.element.children[0]);
+            this.element.insertBefore(div, this.element.children[0]);
         } else {
-            this.element.children.appendChild(div);
+            this.element.appendChild(div);
         }
         return div;
     };
