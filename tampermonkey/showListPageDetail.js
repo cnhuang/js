@@ -94,7 +94,7 @@ class MyTw116 {
   // Toolbar
   addToolBar() {
     let refresh = Util.appendNewElement(this.headerContainer, this.tabStyle());
-    refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' />";
+    refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' />';
   }
   
   // Utility
