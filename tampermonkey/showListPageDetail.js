@@ -65,26 +65,10 @@ class MyTw116 {
   loadTvTab() {
     const tab = this.addTab('TV');
     const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    this.loadTvData(content);
+    this.loadData(content, this.parseTvData, this.tvData);
     this.tabs['tv'] = content;
     tab.onclick = () => this.openTab('tv');      
     return tab; 
-  }
-  
-  loadTvData(element) {
-    const successCallback = (tv, url, parentDiv, content) => {
-      this.parseTvData(parentDiv, tv, url, content);
-    };
-
-    const failCallabck = (tv, url, parentDiv) => {
-      console.log(`Error: ${tv}`);
-    };
-
-    this.tvData.forEach((data, index) =>{
-      const url = `http://www.tw116.com/vod-play-id-${data.id}-sid-0-pid-0.html`;
-      $.get(url, successCallback.bind(this, data, url, element))
-        .fail(failCallabck(data, url, element));
-    });
   }
   
   parseTvData(parentDiv, tv, url, content) {  
@@ -126,6 +110,22 @@ class MyTw116 {
   }
   
   // Utility
+  loadData(element, parseFunc, data) {
+    const successCallback = (tv, url, parentDiv, content) => {
+      parseFunc(parentDiv, tv, url, content);
+    };
+
+    const failCallabck = (tv, url, parentDiv) => {
+      console.log(`Error: ${tv}`);
+    };
+
+    data.forEach((d, index) =>{
+      const url = `http://www.tw116.com/vod-play-id-${d.id}-sid-0-pid-0.html`;
+      $.get(url, successCallback.bind(this, d, url, element))
+        .fail(failCallabck(d, url, element));
+    });
+  }
+  
   addTab(innerText) {
     let tab = Util.appendNewElement(this.headerContainer, {
       cursor: 'pointer',
@@ -196,5 +196,8 @@ const tvSeries = [
   {id: "59724", name: "Get away with murder I/III"}
 ];
 
+const movies = [
+  {id: "66111"}
+];
 // Main function
 Util.loadJQuery(() => new MyTw116(document.getElementsByTagName('body')[0], tvSeries));
