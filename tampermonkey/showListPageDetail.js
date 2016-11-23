@@ -28,16 +28,17 @@ class MyTw116 {
     constructor(element, tvData){
         this.element = element;
         this.parentDiv = this.addParentDiv();
-        this.tabContainer = this.addEmptyElement(this.parentDiv);
+        this.headerContainer = this.addEmptyElement(this.parentDiv);
+        this.bodyContainer = this.addEmptyElement(this.parentDiv);
         this.tvData = tvData;
         this.loadTvTab();
         this.tabs = {};
     }
 
     loadTvTab() {
-        const tab = this.addTab(this.parentDiv, 'TV');
-        const content = this.addEmptyElement(this.parentDiv);
-        this.loadTvData(tvContent);
+        const tab = this.addTab('TV');
+        const content = this.addEmptyElement(this.bodyContainer);
+        this.loadTvData(content);
         this.tabs['tv'] = content;
         tab.onClick = this.openTab('tv');
         
@@ -59,8 +60,8 @@ class MyTw116 {
         });
     }
     
-    addTab(div, innerText) {
-        const tab = this.addEmptyElement(div);
+    addTab(innerText) {
+        const tab = this.addEmptyElement(this.headerContainer);
         tab.style = {marginBottom: '20px', marginRight: '20px', cursor: 'pointer'};
         tab.innerText = innerText;
         return tab;
