@@ -50,6 +50,7 @@ class MyTw116 {
     
     this.loadTvTab().onclick();
     this.loadMovieTab();
+    this.addToolBar();
   }
   
   // Movie Tab
@@ -88,6 +89,12 @@ class MyTw116 {
       return html;
     };
     return this.addTab(this.tvData, render, 'tv', 'TV');
+  }
+  
+  // Toolbar
+  addToolBar() {
+    let refresh = Util.appendNewElement(this.headerContainer, this.tabStyle());
+    refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' />";
   }
   
   // Utility
@@ -135,12 +142,7 @@ class MyTw116 {
   }
   
   addTab(data, render, id, innerText) {
-    let tab = Util.appendNewElement(this.headerContainer, {
-      cursor: 'pointer',
-      marginBottom: '20px',
-      marginRight: '20px',
-      display: 'inline-block'
-    });
+    let tab = Util.appendNewElement(this.headerContainer, this.tabStyle());
     tab.innerText = innerText;
     
     const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
@@ -176,6 +178,15 @@ class MyTw116 {
       this.element.appendChild(div);
     }
     return div;
+  }
+  
+  tabStyle() {
+    return {
+      cursor: 'pointer',
+      marginBottom: '20px',
+      marginRight: '20px',
+      display: 'inline-block'
+    };
   }
 };
 
