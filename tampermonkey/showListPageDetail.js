@@ -210,7 +210,7 @@ const tvSeries = [
   {id: "59887", done: 18, name: '美国恐怖故事：畸形秀'},
   {id: "67505", name: "Luke Cage", done: 1},
   {id: "67567", name: "時空守衛 Timeless", done: 5},
-  {id: "63524"},
+  {id: "63524", nane: "美国恐怖故事第五季"},
   {id: "63902"},
   {id: "63716"},
   {id: "64759", done: 6},
