@@ -127,10 +127,15 @@ class MyTw116 {
   
   // Utility
   addTab(innerText) {
-    let tab = Util.appendNewElement(this.headerContainer);
-    tab.style.cursor = 'pointer';
-    tab.style.marginBottom = '20px';
-    tab.style.marginRight = '20px';
+    let tab = Util.appendNewElement(this.headerContainer, {
+      cursor: 'pointer',
+      marginBottom: '20px',
+      marginRight: '20px',
+      display: 'inline-block'
+    });
+    //tab.style.cursor = 'pointer';
+    //tab.style.marginBottom = '20px';
+    //tab.style.marginRight = '20px';
     tab.innerText = innerText;
     return tab;
   }
