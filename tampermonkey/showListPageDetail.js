@@ -64,8 +64,9 @@ class MyTw116 {
     
     addTab(innerText) {
         let tab = this.addEmptyElement(this.headerContainer);
-        tab.style = {marginBottom: '20px', marginRight: '20px', cursor: 'pointer'};
         tab.style.cursor = 'pointer';
+        tab.style.marginBottom = '20px';
+        tab.style.marginRight = '20px';
         tab.innerText = innerText;
         return tab;
     }
@@ -74,7 +75,7 @@ class MyTw116 {
         for (let k in this.tabs) {
             const v = this.tabs[k];
             v.style = v.style || {};
-            if (k == id) {
+            if (k != id) {
                 v.style.display = 'none';
             } else {
                 v.style.display = 'block';
