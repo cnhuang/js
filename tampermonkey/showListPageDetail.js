@@ -1,6 +1,5 @@
 
 // Utility
-
 class Util {};
 Util.loadScript = (url, callback) => {
   // Adding the script tag to the head as suggested before
@@ -23,6 +22,7 @@ Util.loadJQuery = (callback) => {
 };
 
 
+// MyTw116
 class MyTw116 {
 
   constructor(element, tvData){
@@ -35,15 +35,27 @@ class MyTw116 {
     this.bodyContainer = this.addEmptyElement(this.parentDiv);
     
     this.loadTvTab();
+    this.loadMovieTab();
+  }
+  
+  // Movie Tab
+  loadMovieTab() {
+    const tab = this.addTab('Movies');
+    const content = this.addEmptyElement(this.bodyContainer);
+    content.style.display = 'none';
+    //this.loadTvData(content);
+    this.tabs['movie'] = content;
+    tab.onclick = () => this.openTab('movie');    
   }
 
+  // TV Tab
   loadTvTab() {
     const tab = this.addTab('TV');
     const content = this.addEmptyElement(this.bodyContainer);
+    content.style.display = 'none';
     this.loadTvData(content);
     this.tabs['tv'] = content;
-    tab.onclick = () => this.openTab('tv');
-    
+    tab.onclick = () => this.openTab('tv');    
   }
   
   loadTvData(element) {
@@ -62,6 +74,46 @@ class MyTw116 {
     });
   }
   
+  parseTvData(parentDiv, tv, url, content) {  
+    const url_list = content.match(/var\s+url_list.*?;/);
+    const players = decodeURIComponent(url_list).split('$$$');
+    const unWatched = [];
+    const all = [];
+    console.log(players);
+
+    if (players) {
+      const player = players.find((p) => p.includes('xfplay://')) || '';
+      const links = player.split('+++') || [];
+      links.forEach((link, index) => {
+        const tokens = link.split('++');
+        const name = tokens[0];
+        const url = tokens[1];
+        const id = `${tv.id}-${index}`;
+        
+        if (!tv.done || tv.done <= index) {
+          unWatched.push({name, url, id});
+        }
+        all.push({name, url, id});
+      });
+    }
+
+    const tvName = tv.name || (() => {
+      if (all.length == 0)
+        return 'Unknown';
+      else 
+        return /mz=(.*?)S/.exec(all[0].url) || `Can't parse from ${all[0].url}`;
+    })();
+    
+    let html = `<div><a target=_blank href='${url}'>${tvName} (${tv.id}, watched: ${tv.done || 0})</a></div>`;
+    unWatched.forEach((e) => {
+      html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
+    });
+    var d = this.addEmptyElement(parentDiv);
+    d.innerHTML = html;
+    d.style.marginBottom = '20px';
+  }
+  
+  // Utility
   addTab(innerText) {
     let tab = this.addEmptyElement(this.headerContainer);
     tab.style.cursor = 'pointer';
@@ -96,7 +148,7 @@ class MyTw116 {
       this.element.appendChild(div);
     }
     return div;
-  };
+  }
 
   addEmptyElement(parent, append = true, tag = 'div') {
     var d = document.createElement(tag);
@@ -105,50 +157,10 @@ class MyTw116 {
     }
     return d;
   }
-
-
-  parseTvData(parentDiv, tv, url, content) {  
-    const url_list = content.match(/var\s+url_list.*?;/);
-    const players = decodeURIComponent(url_list).split('$$$');
-    const unWatched = [];
-    const all = [];
-    console.log(players);
-
-    if (players) {
-      const player = players.find((p) => p.includes('xfplay://')) || '';
-      const links = player.split('+++') || [];
-      links.forEach((link, index) => {
-        const tokens = link.split('++');
-        const name = tokens[0];
-        const url = tokens[1];
-        const id = `${tv.id}-${index}`;
-        
-        if (!tv.done || tv.done <= index) {
-          unWatched.push({name, url, id});
-        }
-        all.push({name, url, id});
-      });
-    }
-
-    let tvName = tv.name || (() => {
-        if (all.length == 0)
-          return 'Unknown';
-        else 
-          return /mz=(.*?)S/.exec(all[0].url) || `Can't parse from ${all[0].url}`;
-      })();
-    let html = `<div><a target=_blank href='${url}'>${tvName} (${tv.id}, watched: ${tv.done || 0})</a></div>`;
-    unWatched.forEach((e) => {
-      html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
-    });
-    var d = this.addEmptyElement(parentDiv);
-    d.innerHTML = html;
-    d.style.marginBottom = '20px';
-  }
 };
 
-// End Utility
-
-var tvSeries = [
+// Data
+const tvSeries = [
   {id: "67551", done: 1, name: "Elementary V"},
   {id: "67571", done: 1, name: "scopin III"},
   {id: "67402", name: "Black list IV", done: 8},
@@ -177,5 +189,5 @@ var tvSeries = [
   {id: "59724", name: "Get away with murder I/III"}
 ];
 
-
+// Main function
 Util.loadJQuery(() => new MyTw116(document.getElementsByTagName('body')[0], tvSeries));
