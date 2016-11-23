@@ -42,6 +42,12 @@ class MyTw116 {
     this.element = element;
     this.tvData = tvData;
     this.movieData = movieData;
+    
+    this.init();
+  }
+  
+  // Movie Tab
+  init () {    
     this.tabs = {};
     
     this.parentDiv = this.addParentDiv();
@@ -50,10 +56,10 @@ class MyTw116 {
     
     this.loadTvTab().onclick();
     this.loadMovieTab();
+    
     this.addToolBar();
   }
   
-  // Movie Tab
   loadMovieTab() {
     const render = (tv, url, all, unWatched) => {      
       const tvName = tv.name || (() => {
@@ -94,7 +100,11 @@ class MyTw116 {
   // Toolbar
   addToolBar() {
     let refresh = Util.appendNewElement(this.headerContainer, this.tabStyle());
-    refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' />';
+    refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' style=\'width: 25px\' />';
+    refresh.onclick() = () = {
+      this.element.empty();
+      this.init();
+    };
   }
   
   // Utility
