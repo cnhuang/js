@@ -56,7 +56,7 @@ class MyTw116 {
   loadMovieTab() {
     const tab = this.addTab('Movies');
     const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    //this.loadData(content, this.parseTvData, this.movieData);
+    //this.loadData(content, this.parseData, this.movieData);
     this.tabs['movie'] = content;
     tab.onclick = () => this.openTab('movie');    
     return tab;
@@ -78,15 +78,11 @@ class MyTw116 {
       });
       return html;
     };
-    const tab = this.addTab('TV');
-    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    this.loadData(content, this.parseTvData, this.tvData, render);
-    this.tabs['tv'] = content;
-    tab.onclick = () => this.openTab('tv');      
-    return tab; 
+    return this.addTab(this.tvData, render, 'tv', 'TV');
   }
   
-  parseTvData(parentDiv, tv, url, content, render) {  
+  // Utility
+  parseData(parentDiv, data, url, content, render) {  
     const url_list = content.match(/var\s+url_list.*?;/);
     const players = decodeURIComponent(url_list).split('$$$');
     const unWatched = [];
@@ -100,9 +96,9 @@ class MyTw116 {
         const tokens = link.split('++');
         const name = tokens[0];
         const url = tokens[1];
-        const id = `${tv.id}-${index}`;
+        const id = `${data.id}-${index}`;
         
-        if (!tv.done || tv.done <= index) {
+        if (!data.done || data.done <= index) {
           unWatched.push({name, url, id});
         }
         all.push({name, url, id});
@@ -110,10 +106,9 @@ class MyTw116 {
     }
 
     var d = Util.appendNewElement(parentDiv, {marginBottom: '20px'});
-    d.innerHTML = render(tv, url, all, unWatched);
+    d.innerHTML = render(data, url, all, unWatched);
   }
   
-  // Utility
   loadData(element, parseFunc, data, render) {
     const successCallback = (d, url, content) => {
       parseFunc(element, d, url, content, render);
@@ -130,7 +125,7 @@ class MyTw116 {
     });
   }
   
-  addTab(innerText) {
+  addTab(data, render, id, innerText) {
     let tab = Util.appendNewElement(this.headerContainer, {
       cursor: 'pointer',
       marginBottom: '20px',
@@ -138,6 +133,11 @@ class MyTw116 {
       display: 'inline-block'
     });
     tab.innerText = innerText;
+    
+    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
+    this.loadData(content, this.parseData, data, render);
+    this.tabs[id] = content;
+    tab.onclick = () => this.openTab(id);        
     return tab;
   }
     
