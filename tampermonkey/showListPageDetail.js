@@ -31,17 +31,18 @@ class MyTw116 {
         this.tabContainer = this.addEmptyElement(this.parentDiv);
         this.tvData = tvData;
         this.loadTvTab();
+        this.tabs = {};
     }
 
     loadTvTab() {
-        this.tvTab = this.addEmptyElement(this.parentDiv);
-        this.tvTab.style = {marginBottom: '20px', marginRight: '20px'};
-        this.tvTab.innerText = 'TV';
-        this.tvContent = this.addEmptyElement(this.parentDiv);
-        this.loadTvData(this.tvContent);
+        const tab = this.addTab(this.parentDiv, 'TV');
+        const content = this.addEmptyElement(this.parentDiv);
+        this.loadTvData(tvContent);
+        this.tabs['tv'] = content;
+        tab.onClick = this.openTab('tv');
+        
     }
-
-
+    
     loadTvData(element) {
         const successCallback = (tv, url, parentDiv, content) => {
             this.parseTvData(parentDiv, tv, url, content);
@@ -55,6 +56,24 @@ class MyTw116 {
             const url = `http://www.tw116.com/vod-play-id-${data.id}-sid-0-pid-0.html`;
             $.get(url, successCallback.bind(this, data, url, element))
                 .fail(failCallabck(data, url, element));
+        });
+    }
+    
+    addTab(div, innerText) {
+        const tab = this.addEmptyElement(div);
+        tab.style = {marginBottom: '20px', marginRight: '20px', cursor: 'pointer'};
+        tab.innerText = innerText;
+        return tab;
+    }
+        
+    openTab(id) {
+        this.tabs.forEach((v, k) => {
+            v.style = v.style || {};
+            if (k == id) {
+                v.style.display = 'none';
+            } else {
+                v.style.display = 'block';
+            }
         });
     }
 
