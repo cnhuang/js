@@ -71,14 +71,15 @@ class MyTw116 {
     }
         
     openTab(id) {
-        this.tabs.forEach((v, k) => {
+        for (let k in this.tabs) {
+            const v = this.tabs[k];
             v.style = v.style || {};
             if (k == id) {
                 v.style.display = 'none';
             } else {
                 v.style.display = 'block';
             }
-        });
+        }
     }
 
     addParentDiv() {
