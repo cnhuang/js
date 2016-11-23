@@ -99,15 +99,44 @@ class MyTw116 {
   
   // Toolbar
   addToolBar() {
+    /*
     let refresh = Util.appendNewElement(this.headerContainer, this.tabStyle());
     refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' style=\'width: 25px\' />';
     refresh.onclick = () = {
       this.element.empty();
       this.init();
     };
+    */
   }
   
   // Utility
+  addTab(data, render, id, innerText) {
+    let tab = Util.appendNewElement(this.headerContainer, this.tabStyle());
+    tab.innerText = innerText;
+    
+    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
+    this.loadData(content, this.parseData, data, render);
+    this.tabs[id] = content;
+    tab.onclick = () => this.openTab(id);        
+    return tab;
+  }
+    
+  loadData(element, parseFunc, data, render) {
+    const successCallback = (d, url, content) => {
+      parseFunc(element, d, url, content, render);
+    };
+
+    const failCallabck = (d, url) => {
+      console.log(`Error: ${url} - ${d}`);
+    };
+
+    data.forEach((d, index) =>{
+      const url = `http://www.tw116.com/vod-play-id-${d.id}-sid-0-pid-0.html`;
+      $.get(url, successCallback.bind(this, d, url))
+        .fail(failCallabck(d, url));
+    });
+  }
+  
   parseData(parentDiv, data, url, content, render) {  
     const url_list = content.match(/var\s+url_list.*?;/);
     const players = decodeURIComponent(url_list).split('$$$');
@@ -135,33 +164,6 @@ class MyTw116 {
     d.innerHTML = render(data, url, all, unWatched);
   }
   
-  loadData(element, parseFunc, data, render) {
-    const successCallback = (d, url, content) => {
-      parseFunc(element, d, url, content, render);
-    };
-
-    const failCallabck = (d, url) => {
-      console.log(`Error: ${url} - ${d}`);
-    };
-
-    data.forEach((d, index) =>{
-      const url = `http://www.tw116.com/vod-play-id-${d.id}-sid-0-pid-0.html`;
-      $.get(url, successCallback.bind(this, d, url))
-        .fail(failCallabck(d, url));
-    });
-  }
-  
-  addTab(data, render, id, innerText) {
-    let tab = Util.appendNewElement(this.headerContainer, this.tabStyle());
-    tab.innerText = innerText;
-    
-    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    this.loadData(content, this.parseData, data, render);
-    this.tabs[id] = content;
-    tab.onclick = () => this.openTab(id);        
-    return tab;
-  }
-    
   openTab(id) {
     for (let k in this.tabs) {
       const v = this.tabs[k];
