@@ -41,7 +41,9 @@ class MyTw116 {
   constructor(element, tvData, movieData){
     this.element = element;
     this.tvData = tvData;
-    this.movieData = movieData;
+    this.movieData = movieData;    
+    this.parentDiv = this.addParentDiv();
+    console.log(this.parentDiv);
     
     this.init();
   }
@@ -49,7 +51,6 @@ class MyTw116 {
   init () {    
     this.tabs = {};
     
-    this.parentDiv = this.addParentDiv();
     this.headerContainer = Util.appendNewElement(this.parentDiv);
     this.bodyContainer = Util.appendNewElement(this.parentDiv);
     
