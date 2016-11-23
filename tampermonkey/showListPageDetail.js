@@ -40,7 +40,7 @@ class MyTw116 {
         const content = this.addEmptyElement(this.bodyContainer);
         this.loadTvData(content);
         this.tabs['tv'] = content;
-        tab.onClick = this.openTab('tv');
+        tab.onClick = () => this.openTab('tv');
         
     }
     
@@ -63,6 +63,7 @@ class MyTw116 {
     addTab(innerText) {
         let tab = this.addEmptyElement(this.headerContainer);
         tab.style = {marginBottom: '20px', marginRight: '20px', cursor: 'pointer'};
+        tab.style.cursor = 'pointer';
         tab.innerText = innerText;
         return tab;
     }
