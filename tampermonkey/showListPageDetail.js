@@ -21,17 +21,18 @@ Util.loadJQuery = (callback) => {
   Util.loadScript('http://code.jquery.com/jquery-latest.js', callback);
 };
 
-Util.appendNewElement = (parent, style) => {
-  const d = Util.getNewElement();
+Util.appendNewElement = (parent, style = {}) => {
+  const d = Util.getNewElement(style);
   parent.appendChild(d);
+  return d;
+};
+
+Util.getNewElement = (style = {}) => {
+  const d = document.createElement('div');  
   for (let k in style) {
     d.style[k] = style[k];
   }
   return d;
-};
-
-Util.getNewElement = () => {
-  return document.createElement('div');
 };
 
 // MyTw116
@@ -53,8 +54,7 @@ class MyTw116 {
   // Movie Tab
   loadMovieTab() {
     const tab = this.addTab('Movies');
-    const content = Util.appendNewElement(this.bodyContainer);
-    content.style.display = 'none';
+    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
     //this.loadTvData(content);
     this.tabs['movie'] = content;
     tab.onclick = () => this.openTab('movie');    
@@ -64,7 +64,6 @@ class MyTw116 {
   loadTvTab() {
     const tab = this.addTab('TV');
     const content = Util.appendNewElement(this.bodyContainer);
-    content.style.display = 'none';
     this.loadTvData(content);
     this.tabs['tv'] = content;
     tab.onclick = () => this.openTab('tv');    
@@ -76,7 +75,7 @@ class MyTw116 {
     };
 
     const failCallabck = (tv, url, parentDiv) => {
-      console.log(tv);
+      console.log(`Error: ${tv}`);
     };
 
     this.tvData.forEach((data, index) =>{
@@ -120,9 +119,8 @@ class MyTw116 {
     unWatched.forEach((e) => {
       html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
     });
-    var d = Util.appendNewElement(parentDiv);
+    var d = Util.appendNewElement(parentDiv, {marginBottom: '20px'});
     d.innerHTML = html;
-    d.style.marginBottom = '20px';
   }
   
   // Utility
@@ -133,9 +131,6 @@ class MyTw116 {
       marginRight: '20px',
       display: 'inline-block'
     });
-    //tab.style.cursor = 'pointer';
-    //tab.style.marginBottom = '20px';
-    //tab.style.marginRight = '20px';
     tab.innerText = innerText;
     return tab;
   }
@@ -153,12 +148,13 @@ class MyTw116 {
   }
 
   addParentDiv() {
-    var div = Util.getNewElement();
+    var div = Util.getNewElement({
+      backgroundColor: 'black',
+      top: '0px',
+      padding: '40px',
+      width: '100%'
+    });
     div.id = 'linksDiv';
-    div.style.backgroundColor = 'black';
-    div.style.top = '0px';
-    div.style.padding = '40px';
-    div.style.width = '100%';
     if (this.element.children && this.element.children.length > 0) {
       this.element.insertBefore(div, this.element.children[0]);
     } else {
