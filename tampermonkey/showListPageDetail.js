@@ -46,7 +46,6 @@ class MyTw116 {
     this.init();
   }
   
-  // Movie Tab
   init () {    
     this.tabs = {};
     
@@ -60,6 +59,7 @@ class MyTw116 {
     this.addToolBar();
   }
   
+  // Movie Tab
   loadMovieTab() {
     const render = (tv, url, all, unWatched) => {      
       const tvName = tv.name || (() => {
@@ -101,7 +101,7 @@ class MyTw116 {
   addToolBar() {
     let refresh = Util.appendNewElement(this.headerContainer, this.tabStyle());
     refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' style=\'width: 25px\' />';
-    refresh.onclick() = () = {
+    refresh.onclick = () = {
       this.element.empty();
       this.init();
     };
