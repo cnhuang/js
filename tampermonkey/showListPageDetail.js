@@ -47,7 +47,7 @@ class MyTw116 {
     this.headerContainer = Util.appendNewElement(this.parentDiv);
     this.bodyContainer = Util.appendNewElement(this.parentDiv);
     
-    this.loadTvTab();
+    this.loadTvTab().onclick();
     this.loadMovieTab();
   }
   
