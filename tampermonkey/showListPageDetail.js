@@ -61,7 +61,7 @@ class MyTw116 {
     }
     
     addTab(innerText) {
-        const tab = this.addEmptyElement(this.headerContainer);
+        let tab = this.addEmptyElement(this.headerContainer);
         tab.style = {marginBottom: '20px', marginRight: '20px', cursor: 'pointer'};
         tab.innerText = innerText;
         return tab;
