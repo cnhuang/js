@@ -115,18 +115,18 @@ class MyTw116 {
   
   // Utility
   loadData(element, parseFunc, data, render) {
-    const successCallback = (d, url, parentDiv, content, render) => {
-      parseFunc(parentDiv, d, url, content, render);
+    const successCallback = (d, url, content) => {
+      parseFunc(element, d, url, content, render);
     };
 
-    const failCallabck = (d, url, parentDiv) => {
-      console.log(`Error: ${d}`);
+    const failCallabck = (d, url) => {
+      console.log(`Error: ${url} - ${d}`);
     };
 
     data.forEach((d, index) =>{
       const url = `http://www.tw116.com/vod-play-id-${d.id}-sid-0-pid-0.html`;
-      $.get(url, successCallback.bind(this, d, url, element, render))
-        .fail(failCallabck(d, url, element));
+      $.get(url, successCallback.bind(this, d, url))
+        .fail(failCallabck(d, url));
     });
   }
   
