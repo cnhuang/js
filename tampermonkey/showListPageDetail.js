@@ -102,7 +102,7 @@ class MyTw116 {
     let refresh = Util.appendNewElement(this.headerContainer, this.tabStyle());
     refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' style=\'width: 25px\' />';
     refresh.onclick = () => {
-      this.parentDiv.empty();
+      $(this.parentDiv).empty();
       this.init();
     };
   }
