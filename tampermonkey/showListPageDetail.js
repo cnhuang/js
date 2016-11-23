@@ -43,7 +43,6 @@ class MyTw116 {
     this.tvData = tvData;
     this.movieData = movieData;    
     this.parentDiv = this.addParentDiv();
-    console.log(this.parentDiv);
     
     this.init();
   }
@@ -103,7 +102,7 @@ class MyTw116 {
     let refresh = Util.appendNewElement(this.headerContainer, this.tabStyle());
     refresh.innerHTML = '<img src=\'https://goo.gl/3yWlJj\' style=\'width: 25px\' />';
     refresh.onclick = () => {
-      this.element.empty();
+      this.parentDiv.empty();
       this.init();
     };
   }
