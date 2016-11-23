@@ -53,7 +53,7 @@ class MyTw116 {
   // Movie Tab
   loadMovieTab() {
     const tab = this.addTab('Movies');
-    const content = this.addEmptyElement(this.bodyContainer);
+    const content = Util.appendNewElement(this.bodyContainer);
     content.style.display = 'none';
     //this.loadTvData(content);
     this.tabs['movie'] = content;
@@ -63,7 +63,7 @@ class MyTw116 {
   // TV Tab
   loadTvTab() {
     const tab = this.addTab('TV');
-    const content = this.addEmptyElement(this.bodyContainer);
+    const content = Util.appendNewElement(this.bodyContainer);
     content.style.display = 'none';
     this.loadTvData(content);
     this.tabs['tv'] = content;
