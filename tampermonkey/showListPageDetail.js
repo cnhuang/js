@@ -65,8 +65,8 @@ class MyTw116 {
         div.style.top = '0px';
         div.style.padding = '40px';
         div.style.width = '100%';
-        const children = document.getElementsByTagName('body')[0].children;
-        children.insertBefore(div, children);
+        const body = document.getElementsByTagName('body')[0];
+        body.insertBefore(div, body.children[0]);
         //document.getElementsByTagName('body')[0].appendChild(div);
         //div.innerHTML = '';
         return div;
