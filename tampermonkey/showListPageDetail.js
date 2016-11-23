@@ -61,7 +61,6 @@ class MyTw116 {
     addParentDiv() {
         var div = document.createElement("div");
         div.id = 'linksDiv';
-        div.style.position = "absolute";    
         div.style.backgroundColor = 'black';
         div.style.top = '0px';
         div.style.padding = '40px';
