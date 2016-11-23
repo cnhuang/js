@@ -40,7 +40,7 @@ class MyTw116 {
         const content = this.addEmptyElement(this.bodyContainer);
         this.loadTvData(content);
         this.tabs['tv'] = content;
-        tab.onClick = () => this.openTab('tv');
+        tab.onclick = () => this.openTab('tv');
         
     }
     
