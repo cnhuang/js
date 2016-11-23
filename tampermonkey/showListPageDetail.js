@@ -127,16 +127,13 @@ class MyTw116 {
             });
         }
 
-        let tvName = tv.name;
-        if (!tvName || tvName == undefined) {
-            tvName = (() => {
+        let tvName = tv.name || (() => {
               if (unWatched.length == 0)
                   return 'Unknown';
               else 
                   return /mz=(.*?)S/.exec(unWatched[0].url) || `Can't parse from ${unWatched[0].url}`;
             })();
-        }
-        let html = `<div><a target=_blank href='${url}'>${tv.name} (${tv.id}, watched: ${tv.done})</a></div>`;
+        let html = `<div><a target=_blank href='${url}'>${tvName} (${tv.id}, watched: ${tv.done || 0})</a></div>`;
         unWatched.forEach((e) => {
             html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
         });
