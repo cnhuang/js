@@ -21,6 +21,14 @@ Util.loadJQuery = (callback) => {
   Util.loadScript('http://code.jquery.com/jquery-latest.js', callback);
 };
 
+Util.loadTextAsJs = (url) => {
+  const stringData = $.ajax({
+    url: url + '?' + (new Date()).toISOString(),
+    async: false
+  }).responseText;
+  eval(stringData);
+};
+
 Util.appendNewElement = (parent, style = {}) => {
   const d = Util.getNewElement(style);
   parent.appendChild(d);
@@ -64,11 +72,7 @@ class MyTw116 {
       this.addToolBar();
     };
     
-    var stringData = $.ajax({
-                    url: 'https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js?' + (new Date()).toISOString(),
-                    async: false
-                 }).responseText;
-    eval(stringData); 
+    Util.loadTextAsJs('https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js');
     init_();
   }
   
