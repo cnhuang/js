@@ -3,9 +3,9 @@ const SHOW = (url, done = 0, name = undefined) => ({url, name, done});
 
 // Data
 tvData = [
-  {id: "67551", done: 3, name: "Elementary V"},
+  SHOW('http://www.tw116.com/occident/fuermosijibenyanyifadiwuji/', 3, 'Elementary V'),
+  SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 8, '罪恶黑名单'),
   {id: "67571", done: 1, name: "scopin III"},
-  {id: "67402", name: "Black list IV", done: 8},
   {id: "67358", done: 6, name: "shield IV"},
   {id: "67286", name: "Blind spot II", done: 8},
   {id: "59887", done: 18, name: '美国恐怖故事：畸形秀'},
