@@ -21,12 +21,11 @@ Util.loadJQuery = (callback) => {
   Util.loadScript('http://code.jquery.com/jquery-latest.js', callback);
 };
 
-Util.loadTextAsJs = (url) => {
-  const stringData = $.ajax({
+Util.loadJsText = (url) => {
+  return $.ajax({
     url: url + '?' + (new Date()).toISOString(),
     async: false
   }).responseText;
-  eval(stringData);
 };
 
 Util.appendNewElement = (parent, style = {}) => {
@@ -62,14 +61,13 @@ class MyTw116 {
       this.headerContainer = Util.appendNewElement(this.parentDiv);
       this.bodyContainer = Util.appendNewElement(this.parentDiv);
 
-      console.log(tvData);
       this.loadTvTab(tvData).onclick();
       this.loadMovieTab(movieData);
 
       this.addToolBar();
     };
     
-    Util.loadTextAsJs('https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js');
+    eval(Util.loadJsText('https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js'));
     init_();
   }
   
@@ -98,7 +96,6 @@ class MyTw116 {
       });
       return html;
     };
-    console.log(data);
     return this.addTab(data, render, 'tv', 'TV');
   }
   
@@ -118,8 +115,6 @@ class MyTw116 {
     tab.innerText = innerText;
     
     const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
-    
-    console.log(shows);
     this.loadData(content, this.parseData, shows, render);
     this.tabs[id] = content;
     tab.onclick = () => this.openTab(id);        
