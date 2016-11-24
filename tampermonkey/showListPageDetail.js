@@ -61,7 +61,7 @@ class MyTw116 {
     };
     
     var stringData = $.ajax({
-                    url: 'https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js',
+                    url: 'https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js' + (new Date()).toISOString(),
                     async: false
                  }).responseText;
     eval(stringData); 
