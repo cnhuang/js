@@ -54,6 +54,8 @@ class MyTw116 {
       this.headerContainer = Util.appendNewElement(this.parentDiv);
       this.bodyContainer = Util.appendNewElement(this.parentDiv);
 
+      console.log(tvSeries);
+      console.log(movies);
       this.loadTvTab(tvSeries).onclick();
       this.loadMovieTab(movies);
 
@@ -149,7 +151,6 @@ class MyTw116 {
     const players = decodeURIComponent(url_list).split('$$$');
     const unWatched = [];
     const all = [];
-    console.log(players);
 
     if (players) {
       const player = players.find((p) => p.includes('xfplay://')) || '';
