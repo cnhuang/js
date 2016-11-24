@@ -1,10 +1,9 @@
 
-const SHOW = (id, name = undefined, done = 0) => ({id, name, done});
-const SHOW2 = (url, done = 0, name = undefined) => ({url, name, done});
+const SHOW = (url, done = 0, name = undefined) => ({url, name, done});
 
 // Data
 tvData = [
-  {id: "67551", done: 1, name: "Elementary V"},
+  {id: "67551", done: 3, name: "Elementary V"},
   {id: "67571", done: 1, name: "scopin III"},
   {id: "67402", name: "Black list IV", done: 8},
   {id: "67358", done: 6, name: "shield IV"},
@@ -33,20 +32,20 @@ tvData = [
 ];
 
 movieData = [
-  SHOW2('http://www.tw116.com/action/bianfuxiadazhanchaorenzhengyiliming/'),
-  SHOW2('http://www.tw116.com/drama/qihuansenlin/'),
-  SHOW2('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
-  SHOW2('http://www.tw116.com/fiction/ailisimengyouxianjing2/'),
-  SHOW2('http://www.tw116.com/drama/jinqianguaishou/'),
-  SHOW2('http://www.tw116.com/horror/zhaohun2/'),
-  SHOW2('http://www.tw116.com/action/lieshendongrizhizhan/'),
-  SHOW2('http://www.tw116.com/fiction/chuimengjuren/'),
-  SHOW2('http://www.tw116.com/action/taishanguilaixianzhanconglin/'),
-  SHOW2('http://www.tw116.com/action/dieyingzhongzhong5/'),
-  SHOW2('http://www.tw116.com/comedy/zishaxiaodui/'),
-  SHOW2('http://www.tw116.com/anime/aichongdajimi/'),
-  SHOW2('http://www.tw116.com/action/fushanxingshisulieche/'),
-  SHOW2('http://www.tw116.com/action/lueduozhe/'),
-  SHOW2('http://www.tw116.com/horror/annahuatedeliqimingyun/'),
-  SHOW2('http://www.tw116.com/horror/shiti/'),
+  SHOW('http://www.tw116.com/action/bianfuxiadazhanchaorenzhengyiliming/'),
+  SHOW('http://www.tw116.com/drama/qihuansenlin/'),
+  SHOW('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
+  SHOW('http://www.tw116.com/fiction/ailisimengyouxianjing2/'),
+  SHOW('http://www.tw116.com/drama/jinqianguaishou/'),
+  SHOW('http://www.tw116.com/horror/zhaohun2/'),
+  SHOW('http://www.tw116.com/action/lieshendongrizhizhan/'),
+  SHOW('http://www.tw116.com/fiction/chuimengjuren/'),
+  SHOW('http://www.tw116.com/action/taishanguilaixianzhanconglin/'),
+  SHOW('http://www.tw116.com/action/dieyingzhongzhong5/'),
+  SHOW('http://www.tw116.com/comedy/zishaxiaodui/'),
+  SHOW('http://www.tw116.com/anime/aichongdajimi/'),
+  SHOW('http://www.tw116.com/action/fushanxingshisulieche/'),
+  SHOW('http://www.tw116.com/action/lueduozhe/'),
+  SHOW('http://www.tw116.com/horror/annahuatedeliqimingyun/'),
+  SHOW('http://www.tw116.com/horror/shiti/'),
 ];
