@@ -58,8 +58,8 @@ class MyTw116 {
 
       console.log(tvData);
       console.log(movieData);
-      this.loadTvTab(tvSeries).onclick();
-      this.loadMovieTab(movies);
+      this.loadTvTab(tvData).onclick();
+      this.loadMovieTab(movieData);
 
       this.addToolBar();
     };
