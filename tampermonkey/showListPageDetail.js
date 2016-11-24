@@ -132,20 +132,32 @@ class MyTw116 {
       console.log(`Error: ${url} - ${show}`);
     };
     
-    const parseMainPage = (show, content) => {
-      show.name = content.match(/<strong id=\"mname\">(.*?)</)[1];
-      const detailUrl = content.match(/vod-play-id-(\d+)-/);
-      console.log(detailUrl);
+    const parse = (show) => {
+      const url = `http://www.tw116.com/vod-play-id-${show.id}-sid-0-pid-0.html`;
+      $.get(url, successCallback.bind(this, show, url))
+          .fail(failCallabck(show, url));
     };
 
-    console.log(shows);
+    const parseMainPage = (show, content) => {
+      const nameMatch = content.match(/<strong id=\"mname\">(.*?)</) || [];
+      if (nameMatch.length > 1) {
+        show.name = nameMatch[1];
+      }
+      
+      const detailUrlMatch = content.match(/vod-play-id-(\d+)-/) || [];
+      if (detailUrlMatch.length > 1) {
+        show.id = detailUrlMatch[0];
+        parse(show);
+      } else {
+        console.log(`No id found for ${show.name} - ${show.url}`);
+      }
+    };
+    
     shows.forEach((show, index) =>{
       if (show.url) {
         $.get(show.url, parseMainPage.bind(this, show))
       } else {
-        const url = `http://www.tw116.com/vod-play-id-${show.id}-sid-0-pid-0.html`;
-        $.get(url, successCallback.bind(this, show, url))
-          .fail(failCallabck(show, url));
+        parse(show);
       }
     });
   }
