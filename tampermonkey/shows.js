@@ -1,6 +1,6 @@
 
 // Data
-const tvSeries = [
+tvData = [
   {id: "67551", done: 2, name: "Elementary V"},
   {id: "67571", done: 1, name: "scopin III"},
   {id: "67402", name: "Black list IV", done: 8},
@@ -29,6 +29,6 @@ const tvSeries = [
   {id: "59724", name: "Get away with murder I/III"}
 ];
 
-const movies = [
+movieData = [
   {id: "66111"}
 ];
