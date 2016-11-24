@@ -140,7 +140,7 @@ class MyTw116 {
     console.log(shows);
     shows.forEach((show, index) =>{
       if (show.url) {
-        $.get(show.url, successCallback.bind(this, show, url))
+        $.get(show.url, parseMainPage)
       } else {
         const url = `http://www.tw116.com/vod-play-id-${show.id}-sid-0-pid-0.html`;
         $.get(url, successCallback.bind(this, show, url))
