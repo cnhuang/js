@@ -62,6 +62,7 @@ class MyTw116 {
       this.headerContainer = Util.appendNewElement(this.parentDiv);
       this.bodyContainer = Util.appendNewElement(this.parentDiv);
 
+      console.log(tvData);
       this.loadTvTab(tvData).onclick();
       this.loadMovieTab(movieData);
 
@@ -97,6 +98,7 @@ class MyTw116 {
       });
       return html;
     };
+    console.log(data);
     return this.addTab(data, render, 'tv', 'TV');
   }
   
@@ -116,6 +118,8 @@ class MyTw116 {
     tab.innerText = innerText;
     
     const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
+    
+    console.log(shows);
     this.loadData(content, this.parseData, shows, render);
     this.tabs[id] = content;
     tab.onclick = () => this.openTab(id);        
