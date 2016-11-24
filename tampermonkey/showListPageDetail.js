@@ -131,12 +131,21 @@ class MyTw116 {
     const failCallabck = (show, url) => {
       console.log(`Error: ${url} - ${show}`);
     };
+    
+    const parseMainPage = (content) => {
+      const name = content.match(/<strong id=\"mname\">(.*?)</);
+      console.log(name);
+    };
 
     console.log(shows);
     shows.forEach((show, index) =>{
-      const url = `http://www.tw116.com/vod-play-id-${show.id}-sid-0-pid-0.html`;
-      $.get(url, successCallback.bind(this, show, url))
-        .fail(failCallabck(show, url));
+      if (show.url) {
+        $.get(show.url, successCallback.bind(this, show, url))
+      } else {
+        const url = `http://www.tw116.com/vod-play-id-${show.id}-sid-0-pid-0.html`;
+        $.get(url, successCallback.bind(this, show, url))
+          .fail(failCallabck(show, url));
+      }
     });
   }
   
