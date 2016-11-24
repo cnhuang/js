@@ -1,5 +1,6 @@
 
 const SHOW = (id, name = undefined, done = 0) => ({id, name, done});
+const SHOW2 = (url, name = undefined, done = 0) => ({url, name, done});
 
 // Data
 tvData = [
@@ -34,5 +35,5 @@ tvData = [
 movieData = [
   SHOW('66111'),
   SHOW('65860', '奇幻森林'),
-  SHOW('http://www.tw116.com/action/bianfuxiadazhanchaorenzhengyiliming/', '蝙蝠俠大戰超人'),
+  SHOW2('http://www.tw116.com/action/bianfuxiadazhanchaorenzhengyiliming/', '蝙蝠俠大戰超人'),
 ];
