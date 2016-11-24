@@ -59,7 +59,13 @@ class MyTw116 {
 
       this.addToolBar();
     };
-    Util.loadScript('https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js', init_);
+    
+    var stringData = $.ajax({
+                    url: 'https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js',
+                    async: false
+                 }).responseText;
+    eval(stringData); 
+    init_();
   }
   
   // Movie Tab
