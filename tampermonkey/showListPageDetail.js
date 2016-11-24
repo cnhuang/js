@@ -73,10 +73,10 @@ class MyTw116 {
   
   // Movie Tab
   loadMovieTab(data) {
-    const render = (show, url, episodes) => {      
+    const render = (show, episodes) => {      
       const showName = this.getShowName(show, episodes);
 
-      let html = `<div><a target=_blank href='${url}'>${showName}</a></div>`;
+      let html = `<div><a target=_blank href='${show.url}'>${showName}</a></div>`;
       episodes.forEach((e) => {
         const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
         html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
@@ -88,10 +88,10 @@ class MyTw116 {
 
   // TV Tab
   loadTvTab(data) {
-    const render = (show, url, episodes) => {      
+    const render = (show, episodes) => {      
       const showName = this.getShowName(show, episodes);
 
-      let html = `<div><a target=_blank href='${url}'>${showName} (${show.id}, watched: ${show.done || 0})</a></div>`;
+      let html = `<div><a target=_blank href='${show.url}'>${showName} (${show.id}, watched: ${show.done || 0})</a></div>`;
       episodes.forEach((e) => {
         const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
         html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
@@ -124,18 +124,21 @@ class MyTw116 {
   }
     
   loadData(element, parseFunc, shows, render) {
-    const successCallback = (show, url, content) => {
-      parseFunc(element, show, url, content, render);
+    const successCallback = (show, content) => {
+      parseFunc(element, show, content, render);
     };
 
     const failCallabck = (show, url) => {
-      console.log(`Error: ${url} - ${show}`);
+      console.log(`Error loading: ${show.url}`);
     };
     
     const parse = (show) => {
       const url = `http://www.tw116.com/vod-play-id-${show.id}-sid-0-pid-0.html`;
-      $.get(url, successCallback.bind(this, show, url))
-          .fail(failCallabck(show, url));
+      if (!show.url) {
+        show.url = url;
+      }
+      $.get(url, successCallback.bind(this, show))
+          .fail(failCallabck(show));
     };
 
     const parseMainPage = (show, content) => {
@@ -162,7 +165,7 @@ class MyTw116 {
     });
   }
   
-  parseData(parentDiv, show, url, content, render) {  
+  parseData(parentDiv, show, content, render) {  
     const url_list = content.match(/var\s+url_list.*?;/);
     const players = decodeURIComponent(url_list).split('$$$');
     const episodes = [];
@@ -181,7 +184,7 @@ class MyTw116 {
     }
 
     var d = Util.appendNewElement(parentDiv, {marginBottom: '20px'});
-    d.innerHTML = render(show, url, episodes);
+    d.innerHTML = render(show, episodes);
   }
   
   openTab(id) {
