@@ -211,7 +211,7 @@ class MyTw116 {
 };
 
 // Data
-const tvSeries = [
+const tvSeries2 = [
   {id: "67551", done: 1, name: "Elementary V"},
   {id: "67571", done: 1, name: "scopin III"},
   {id: "67402", name: "Black list IV", done: 8},
@@ -240,8 +240,8 @@ const tvSeries = [
   {id: "59724", name: "Get away with murder I/III"}
 ];
 
-const movies = [
+const movies2 = [
   {id: "66111"}
 ];
 // Main function
-Util.loadJQuery(() => new MyTw116(document.getElementsByTagName('body')[0], tvSeries, movies));
+Util.loadJQuery(() => new MyTw116(document.getElementsByTagName('body')[0], tvSeries2, movies2));
