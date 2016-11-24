@@ -1,6 +1,6 @@
 
 const SHOW = (id, name = undefined, done = 0) => ({id, name, done});
-const SHOW2 = (url, name = undefined, done = 0) => ({url, name, done});
+const SHOW2 = (url, done = 0, name = undefined) => ({url, name, done});
 
 // Data
 tvData = [
@@ -33,7 +33,20 @@ tvData = [
 ];
 
 movieData = [
-  SHOW('66111'),
-  SHOW('65860', '奇幻森林'),
-  SHOW2('http://www.tw116.com/action/bianfuxiadazhanchaorenzhengyiliming/', '蝙蝠俠大戰超人'),
+  SHOW2('http://www.tw116.com/action/bianfuxiadazhanchaorenzhengyiliming/'),
+  SHOW2('http://www.tw116.com/drama/qihuansenlin/'),
+  SHOW2('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
+  SHOW2('http://www.tw116.com/fiction/ailisimengyouxianjing2/'),
+  SHOW2('http://www.tw116.com/drama/jinqianguaishou/'),
+  SHOW2('http://www.tw116.com/horror/zhaohun2/'),
+  SHOW2('http://www.tw116.com/action/lieshendongrizhizhan/'),
+  SHOW2('http://www.tw116.com/fiction/chuimengjuren/'),
+  SHOW2('http://www.tw116.com/action/taishanguilaixianzhanconglin/'),
+  SHOW2('http://www.tw116.com/action/dieyingzhongzhong5/'),
+  SHOW2('http://www.tw116.com/comedy/zishaxiaodui/'),
+  SHOW2('http://www.tw116.com/anime/aichongdajimi/'),
+  SHOW2('http://www.tw116.com/action/fushanxingshisulieche/'),
+  SHOW2('http://www.tw116.com/action/lueduozhe/'),
+  SHOW2('http://www.tw116.com/horror/annahuatedeliqimingyun/'),
+  SHOW2('http://www.tw116.com/horror/shiti/'),
 ];
