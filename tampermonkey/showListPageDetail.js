@@ -40,27 +40,30 @@ class MyTw116 {
 
   constructor(element, tvData, movieData){
     this.element = element;
-    this.tvData = tvData;
-    this.movieData = movieData;    
+    //this.tvData = tvData;
+    //this.movieData = movieData;    
     this.parentDiv = this.addParentDiv();
     
     this.init();
   }
   
   init () {    
-    this.tabs = {};
-    
-    this.headerContainer = Util.appendNewElement(this.parentDiv);
-    this.bodyContainer = Util.appendNewElement(this.parentDiv);
-    
-    this.loadTvTab().onclick();
-    this.loadMovieTab();
-    
-    this.addToolBar();
+    const init_ = () => {
+      this.tabs = {};
+
+      this.headerContainer = Util.appendNewElement(this.parentDiv);
+      this.bodyContainer = Util.appendNewElement(this.parentDiv);
+
+      this.loadTvTab(tvSeries).onclick();
+      this.loadMovieTab(movies);
+
+      this.addToolBar();
+    };
+    Util.loadScript('https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js', init_);
   }
   
   // Movie Tab
-  loadMovieTab() {
+  loadMovieTab(data) {
     const render = (tv, url, all, unWatched) => {      
       const tvName = tv.name || (() => {
         if (all.length == 0)
@@ -75,11 +78,11 @@ class MyTw116 {
       });
       return html;
     };
-    return this.addTab(this.movieData, render, 'movie', 'Movies');
+    return this.addTab(data, render, 'movie', 'Movies');
   }
 
   // TV Tab
-  loadTvTab() {
+  loadTvTab(data) {
     const render = (tv, url, all, unWatched) => {      
       const tvName = tv.name || (() => {
         if (all.length == 0)
@@ -94,7 +97,7 @@ class MyTw116 {
       });
       return html;
     };
-    return this.addTab(this.tvData, render, 'tv', 'TV');
+    return this.addTab(data, render, 'tv', 'TV');
   }
   
   // Toolbar
