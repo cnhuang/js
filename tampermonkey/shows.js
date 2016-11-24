@@ -34,4 +34,5 @@ tvData = [
 movieData = [
   SHOW('66111'),
   SHOW('65860', '奇幻森林'),
+  SHOW('http://www.tw116.com/action/bianfuxiadazhanchaorenzhengyiliming/', '蝙蝠俠大戰超人'),
 ];
