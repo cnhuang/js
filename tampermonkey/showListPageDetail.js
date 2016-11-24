@@ -48,14 +48,16 @@ class MyTw116 {
   }
   
   init () {    
+    let tvData;
+    let movieData;
     const init_ = () => {
       this.tabs = {};
 
       this.headerContainer = Util.appendNewElement(this.parentDiv);
       this.bodyContainer = Util.appendNewElement(this.parentDiv);
 
-      console.log(tvSeries);
-      console.log(movies);
+      console.log(tvData);
+      console.log(movieData);
       this.loadTvTab(tvSeries).onclick();
       this.loadMovieTab(movies);
 
