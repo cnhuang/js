@@ -22,7 +22,7 @@ tvData = [
   //{id: "40555", name: "black mirror S1"},
   //{id: "50254", name: "black mirror S2"},
   SHOW('http://www.tw116.com/occident/heijingdisanji/', 0, 'black mirror S3'),
-  SHOW('http://www.tw116.com/occident/shuishixiongshoudiyijiwomenzhizhongdiyiji/', 0 '誰是兇手'),
+  SHOW('http://www.tw116.com/occident/shuishixiongshoudiyijiwomenzhizhongdiyiji/', 0, '誰是兇手'),
   SHOW('http://www.tw116.com/occident/shandianxiadiyiji/', 0 ,'Flash III'), 
   SHOW('http://www.tw116.com/occident/heikejuntuandiyiji/', 0, 'Mr. Robot'),
   SHOW('http://www.tw116.com/occident/xiaoyaofawaidiyiji/', 0, 'Get away with murder'),
