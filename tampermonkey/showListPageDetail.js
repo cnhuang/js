@@ -146,7 +146,7 @@ class MyTw116 {
       
       const detailUrlMatch = content.match(/vod-play-id-(\d+)-/) || [];
       if (detailUrlMatch.length > 1) {
-        show.id = detailUrlMatch[0];
+        show.id = detailUrlMatch[1];
         parse(show);
       } else {
         console.log(`No id found for ${show.name} - ${show.url}`);
