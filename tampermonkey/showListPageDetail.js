@@ -79,7 +79,7 @@ class MyTw116 {
       let html = `<div><a target=_blank href='${url}'>${showName}</a></div>`;
       episodes.forEach((e) => {
         const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
-        html += `<span style="padding-right:20px;${watchedStyle}" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
+        html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
       });
       return html;
     };
@@ -94,7 +94,7 @@ class MyTw116 {
       let html = `<div><a target=_blank href='${url}'>${showName} (${show.id}, watched: ${show.done || 0})</a></div>`;
       episodes.forEach((e) => {
         const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
-        html += `<span style="padding-right:20px;${watchedStyle}" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
+        html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
       });
       return html;
     };
