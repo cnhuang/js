@@ -134,6 +134,7 @@ class MyTw116 {
     
     const parseMainPage = (content) => {
       const name = content.match(/<strong id=\"mname\">(.*?)</);
+      console.log(content);
       console.log(name);
     };
 
