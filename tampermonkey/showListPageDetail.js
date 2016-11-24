@@ -132,16 +132,16 @@ class MyTw116 {
       console.log(`Error: ${url} - ${show}`);
     };
     
-    const parseMainPage = (content) => {
-      const name = content.match(/<strong id=\"mname\">(.*?)</);
-      console.log(content);
-      console.log(name);
+    const parseMainPage = (show, content) => {
+      show.name = content.match(/<strong id=\"mname\">(.*?)</)[1];
+      const detailUrl = content.match(/vod-play-id-(\d+)-/);
+      console.log(detailUrl);
     };
 
     console.log(shows);
     shows.forEach((show, index) =>{
       if (show.url) {
-        $.get(show.url, parseMainPage)
+        $.get(show.url, parseMainPage.bind(this, show))
       } else {
         const url = `http://www.tw116.com/vod-play-id-${show.id}-sid-0-pid-0.html`;
         $.get(url, successCallback.bind(this, show, url))
