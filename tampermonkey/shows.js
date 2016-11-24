@@ -1,7 +1,7 @@
 
 // Data
 const tvSeries = [
-  {id: "67551", done: 1, name: "Elementary V"},
+  {id: "67551", done: 2, name: "Elementary V"},
   {id: "67571", done: 1, name: "scopin III"},
   {id: "67402", name: "Black list IV", done: 8},
   {id: "67358", done: 6, name: "shield IV"},
