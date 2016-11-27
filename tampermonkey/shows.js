@@ -42,7 +42,7 @@ movieData = [
   SHOW('http://www.tw116.com/action/dieyingzhongzhong5/'),
   SHOW('http://www.tw116.com/comedy/zishaxiaodui/'),
   SHOW('http://www.tw116.com/anime/aichongdajimi/'),
-  SHOW('http://www.tw116.com/action/fushanxingshisulieche/'),
+  SHOW('http://www.tw116.com/action/fushanxingshisulieche/', 1),
   SHOW('http://www.tw116.com/action/lueduozhe/'),
   SHOW('http://www.tw116.com/horror/annahuatedeliqimingyun/'),
   SHOW('http://www.tw116.com/horror/shiti/'),
