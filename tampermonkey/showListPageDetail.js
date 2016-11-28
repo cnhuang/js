@@ -97,7 +97,7 @@ class MyTw116 {
     const render = (show, episodes) => {      
       const showName = this.getShowName(show, episodes);
 
-      let html = `<div><a target=_blank href='${show.url}'>${showName} (${show.id}, watched: ${show.done || 0})</a></div>`;
+      let html = `<div><a target=_blank href='${show.url}'>${showName} (${show.id})</a></div>`;
       episodes.forEach((e) => {
         const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
         html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
