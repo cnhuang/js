@@ -48,6 +48,7 @@ class MyTw116 {
   constructor(element){
     this.element = element;
     this.parentDiv = this.addParentDiv();
+    this.selectedTab = 'tv';
     
     this.init();
   }
@@ -61,10 +62,11 @@ class MyTw116 {
       this.headerContainer = Util.appendNewElement(this.parentDiv);
       this.bodyContainer = Util.appendNewElement(this.parentDiv);
 
-      this.loadTvTab(tvData).onclick();
+      this.loadTvTab(tvData);
       this.loadMovieTab(movieData);
 
       this.addToolBar();
+      this.openTab(this.selectedTab);
     };
     
     eval(Util.loadJsText('https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js'));
@@ -201,6 +203,7 @@ class MyTw116 {
         v.style.display = 'block';
       }
     }
+    this.selectedTab = id;
   }
 
   addParentDiv() {
