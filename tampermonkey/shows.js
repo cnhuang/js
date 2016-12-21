@@ -5,14 +5,14 @@ const SHOW = (url, done = 0, name = undefined) => ({url, name, done});
 tvData = [
   SHOW('http://www.tw116.com/occident/fuermosijibenyanyifadiwuji/', 4, 'Elementary V'),
   SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 8, '罪恶黑名单'),
-  SHOW('http://www.tw116.com/occident/tianxiedisanji/', 6, 'scopin III'), //# -1
+  SHOW('http://www.tw116.com/occident/tianxiedisanji/', 8, 'scopin III'), //# -1
   SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 8, 'shield IV'),
   SHOW('http://www.tw116.com/occident/mangdiandierji/', 9, 'Blind spot II'),
   SHOW('http://www.tw116.com/occident/jiexikaqiongsidiyiji/', 0, 'Jones'),
   SHOW('http://www.tw116.com/occident/lukekaiqidiyiji/', 1, 'Luke Cage'),
   SHOW('http://www.tw116.com/occident/shikongshouweikuashikongzhuibudiyiji/', 10, '時空守衛 Timeless'),
   SHOW('http://www.tw116.com/occident/tushuguanyuandierji/', 10, '圖書館員第二季'),
-  SHOW('http://www.tw116.com/occident/xibushijiediyiji/', 9, 'West World'),
+  SHOW('http://www.tw116.com/occident/xibushijiediyiji/', 10, 'West World'),
   SHOW('http://www.tw116.com/occident/tegongkatedierji/', 6, 'Agent carter'),
   SHOW('http://www.tw116.com/occident/Xdangandishiji/', 6, 'X File'),
   SHOW('http://www.tw116.com/occident/shierhouzidierji/', 13, '12 Monkeys'),
