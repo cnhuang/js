@@ -35,7 +35,7 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
   SHOW('http://www.tw116.com/fiction/ailisimengyouxianjing2/'),
   SHOW('http://www.tw116.com/drama/jinqianguaishou/'),
-  SHOW('http://www.tw116.com/horror/zhaohun2/'),
+  SHOW('http://www.tw116.com/horror/zhaohun2/', 1),
   SHOW('http://www.tw116.com/action/lieshendongrizhizhan/'),
   SHOW('http://www.tw116.com/fiction/chuimengjuren/'),
   SHOW('http://www.tw116.com/action/taishanguilaixianzhanconglin/'),
