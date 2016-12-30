@@ -63,5 +63,5 @@ movieData = [
   SHOW('http://www.tw116.com/horror/shatanjueshadao/'),
   SHOW('http://www.tw116.com/horror/huashenguimotong/'),
   SHOW('http://www.tw116.com/horror/fengchecanan/'),
-  
+  SHOW('http://tw116.com/fiction/xingqiudazhanwaichuanxiadaoyihao/'),
 ];
