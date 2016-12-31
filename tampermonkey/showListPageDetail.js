@@ -177,7 +177,7 @@ class MyTw116 {
     const episodes = [];
 
     if (players) {
-      const player = players.find((p) => p.includes('qvod://')) || '';//xfplay
+      const player = players.find((p) => p.includes('xfplay://')) || '';
       const links = player.split('+++') || [];
       links.forEach((link, index) => {
         const tokens = link.split('++');
