@@ -29,6 +29,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/xiaoyaofawaidiyiji/', 0, 'Get away with murder'),
   SHOW('http://www.tw116.com/occident/meiguokongbugushijixingxiumeiguoguaitandisiji/', 18, '美国恐怖故事：畸形秀'),
   SHOW('http://www.tw116.com/occident/meiguokongbugushidiwuji/', 0, '美国恐怖故事第五季'),
+  SHOW('http://www.tw116.com/occident/baifenzhisandiyiji/', 0, '3%'),
 ];
 
 movieData = [
