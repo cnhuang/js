@@ -67,4 +67,8 @@ movieData = [
   SHOW('http://www.tw116.com/horror/fengchecanan/'),
   SHOW('http://www.tw116.com/fiction/xingqiudazhanwaichuanxiadaoyihao/'),
   SHOW('http://www.tw116.com/anime/bingxueqiyuan/'),
+  SHOW('http://www.tw116.com/anime/conglindafangong/'),
+  SHOW('http://www.tw116.com/action/conglindafangong2/'),
+  SHOW('http://www.tw116.com/action/conglindafangong3/'),
+  SHOW('http://www.tw116.com/action/conglindafangong4/'),
 ];
