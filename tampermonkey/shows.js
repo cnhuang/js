@@ -4,7 +4,7 @@ const SHOW = (url, done = 0, name = undefined) => ({url, name, done});
 // Data
 tvData = [
   SHOW('http://www.tw116.com/occident/fuermosijibenyanyifadiwuji/', 10, 'Elementary V'),
-  SHOW('http://www.tw116.com/occident/xinfuermosishentanxialuokedisiji/', 0, 'English Homels'),
+  SHOW('http://www.tw116.com/occident/xinfuermosishentanxialuokedisiji/', 3, 'English Homels'),
   SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 8, '罪恶黑名单'),
   SHOW('http://www.tw116.com/occident/tianxiedisanji/', 10, 'scopin III'), //# -1. e.g. 10 will block to 11
   SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 8, 'shield IV'),
