@@ -12,7 +12,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/jiexikaqiongsidiyiji/', 0, 'Jones'),
   SHOW('http://www.tw116.com/occident/lukekaiqidiyiji/', 1, 'Luke Cage'),
   SHOW('http://www.tw116.com/occident/shikongshouweikuashikongzhuibudiyiji/', 11, '時空守衛 Timeless'),
-  SHOW('http://www.tw116.com/occident/tushuguanliyuandisanji/', 0, '圖書館員第3季'),
+  SHOW('http://www.tw116.com/occident/tushuguanliyuandisanji/', 9, '圖書館員第3季'),
   SHOW('http://www.tw116.com/occident/xibushijiediyiji/', 10, 'West World'),
   SHOW('http://www.tw116.com/occident/tegongkatedierji/', 10, 'Agent carter'),
   SHOW('http://www.tw116.com/occident/Xdangandishiji/', 6, 'X File'),
