@@ -72,4 +72,5 @@ movieData = [
   SHOW('http://www.tw116.com/action/conglindafangong3/'),
   SHOW('http://www.tw116.com/action/conglindafangong4/'),
   SHOW('http://www.tw116.com/anime/fengkuangdongwucheng/'),
+  SHOW('http://www.tw116.com/drama/shenqidongwuzainali/'),
 ];
