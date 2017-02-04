@@ -6,7 +6,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/fuermosijibenyanyifadiwuji/', 12, 'Elementary V'),
   SHOW('http://www.tw116.com/occident/xinfuermosishentanxialuokedisiji/', 3, 'English Homels'),
   SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 8, '罪恶黑名单'),
-  SHOW('http://www.tw116.com/occident/tianxiedisanji/', 10, 'scopin III'), //# -1. e.g. 10 will block to 11
+  SHOW('http://www.tw116.com/occident/tianxiedisanji/', 11, 'scopin III'), //# -1. e.g. 10 will block to 11
   SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 11, 'shield IV'),
   SHOW('http://www.tw116.com/occident/mangdiandierji/', 9, 'Blind spot II'),
   SHOW('http://www.tw116.com/occident/jiexikaqiongsidiyiji/', 0, 'Jones'),
@@ -72,7 +72,7 @@ movieData = [
   SHOW('http://www.tw116.com/action/conglindafangong3/'),
   SHOW('http://www.tw116.com/action/conglindafangong4/'),
   SHOW('http://www.tw116.com/anime/fengkuangdongwucheng/'),
-  SHOW('http://www.tw116.com/drama/shenqidongwuzainali/'),
+  SHOW('http://www.tw116.com/drama/shenqidongwuzainali/', 1),
   SHOW('http://www.tw116.com/comedy/ailezhicheng/'),
   SHOW('http://www.tw116.com/anime/saichezongdongyuan2fandouchewang2qichezongdongyuan2feichezhengchuan2/'),
   SHOW('http://www.tw116.com/anime/qichezongdongyuansaichezongdongyuan/'),
