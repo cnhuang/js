@@ -65,7 +65,7 @@ movieData = [
   SHOW('http://www.tw116.com/horror/shatanjueshadao/'),
   SHOW('http://www.tw116.com/horror/huashenguimotong/'),
   SHOW('http://www.tw116.com/horror/fengchecanan/'),
-  SHOW('http://www.tw116.com/fiction/xingqiudazhanwaichuanxiadaoyihao/',,'Rogue One: A Star Wars Story'),
+  SHOW('http://www.tw116.com/fiction/xingqiudazhanwaichuanxiadaoyihao/','','Rogue One: A Star Wars Story'),
   SHOW('http://www.tw116.com/anime/bingxueqiyuan/'),
   SHOW('http://www.tw116.com/anime/conglindafangong/'),
   SHOW('http://www.tw116.com/action/conglindafangong2/'),
