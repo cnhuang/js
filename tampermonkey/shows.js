@@ -85,7 +85,7 @@ movieData = [
   SHOW('Sing'),
   SHOW('Rogue One: A Star Wars Story'),
   SHOW('John Wick: Chapter 2'),
-  SHOW('John Wick'),
+  SHOW('http://www.tw116.com/action/jisuzhuishahanweirenwu/', '', 'John Wick'),
   SHOW('Passengers'),
   SHOW('Moana'),
   SHOW('Arrival'),
