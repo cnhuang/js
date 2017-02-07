@@ -83,8 +83,8 @@ movieData = [
   SHOW('Resident Evil: The Final Chapter'),
   SHOW('xXx: Return of Xander Cage'),
   SHOW('http://www.tw116.com/drama/huanlehaoshengyin/', '', 'Sing'),
+  SHOW('http://www.tw116.com/fiction/jianglin/', '', 'Arrival'),
   SHOW('John Wick: Chapter 2'),
   SHOW('Passengers'),
   SHOW('Moana'),
-  SHOW('Arrival'),
 ];
