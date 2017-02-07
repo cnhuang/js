@@ -19,7 +19,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/shierhouzidierji/', 13, '12 Monkeys'),
   SHOW('http://www.tw116.com/occident/bingyuhuozhigequanlideyouxidiliuji/' , 10, 'Game of Throne 6'),
   SHOW('http://www.tw116.com/occident/guaiqiwuyudiyiji/', 8, 'Stanger things I'),
-  SHOW('http://www.tw116.com/occident/lvxingzhechuanyuezhediyiji/', 0, '旅行者/穿越者第一季'),
+  SHOW('http://www.tw116.com/occident/lvxingzhechuanyuezhediyiji/', 10, '旅行者/穿越者第一季'),
   SHOW('http://www.tw116.com/mainland/guichuidengzhijingjuegucheng/', 0, ''),
   //{id: "40555", name: "black mirror S1"},
   //{id: "50254", name: "black mirror S2"},
