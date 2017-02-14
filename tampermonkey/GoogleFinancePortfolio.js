@@ -1,5 +1,8 @@
+
 var f = function() {
   let parent = document.querySelector('.portfolio-header-row');
+  if (!parent)
+    return;
   let ths = parent.querySelectorAll('th');
   let lastIndex;
   let sharesIndex;
@@ -17,6 +20,8 @@ var f = function() {
         case 'Shares':
           sharesIndex = i;
           break;
+        case 'Cost per Share':
+          return;
       }
     }
   });
@@ -39,5 +44,10 @@ var f = function() {
     row.insertBefore(shareBaseElem, tds[lastIndex + 1]);
     console.log(`${cost} / ${share} = ${shareBase}`);
   }); 
+};
 
-}();
+ff() {
+  f();
+  window.setTimeout(ff, 5000);
+}
+ff();
