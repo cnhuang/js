@@ -1,5 +1,5 @@
 
-const f = () => {
+var f = () => {
   let parent = document.querySelector('.portfolio-header-row');
   if (!parent)
     return;
@@ -54,7 +54,7 @@ const f = () => {
   parent.insertBefore(shareBaseTitleElem, ths[lastIndex + 1]);
 };
 
-const ff = () => {
+var ff = () => {
   f();
   window.setTimeout(ff, 5000);
 }
