@@ -4,12 +4,14 @@ const f = () => {
   if (!parent)
     return;
   let ths = parent.querySelectorAll('th');
+  console.log(ths);
   let lastIndex;
   let sharesIndex;
   let costIndex;
   ths.forEach((th, i) => {
     let label = th.querySelector('.sortable-label');
     if (label) {
+    console.log(label.innerHTML);
       switch(label.innerHTML) {
         case 'Last price':
           lastIndex = i;
@@ -26,7 +28,12 @@ const f = () => {
     }
   });
 
+  if (! (lastIndex && costIndex && sharesIndex))
+    return;
+
+  console.log(`${lastIndex} ${costIndex} ${sharesIndex}`); 
   let rows = document.querySelectorAll('.gf-table tbody tr');
+  console.log(rows);
   rows.forEach((row) => {
     let tds = row.querySelectorAll('td');
     let cost = parseInt(tds[costIndex].innerHTML.replace(',', ''));
