@@ -25,9 +25,6 @@ const f = () => {
       }
     }
   });
-  let shareBaseTitleElem = document.createElement("th");
-  shareBaseTitleElem.innerHTML = 'Cost per Share';
-  parent.insertBefore(shareBaseTitleElem, ths[lastIndex + 1]);
 
   let rows = document.querySelectorAll('.gf-table tbody tr');
   rows.forEach((row) => {
@@ -44,6 +41,10 @@ const f = () => {
     row.insertBefore(shareBaseElem, tds[lastIndex + 1]);
     console.log(`${cost} / ${share} = ${shareBase}`);
   }); 
+    
+  let shareBaseTitleElem = document.createElement("th");
+  shareBaseTitleElem.innerHTML = 'Cost per Share';
+  parent.insertBefore(shareBaseTitleElem, ths[lastIndex + 1]);
 };
 
 const ff = () => {
