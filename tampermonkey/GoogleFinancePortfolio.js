@@ -23,7 +23,7 @@ var f = () => {
           sharesIndex = i;
           break;
         case 'Cost per Share':
-          lastIndex = costIndex = sharesIndex = null;
+          lastIndex = costIndex = sharesIndex = undefined;
           return;
       }
     }
@@ -51,7 +51,10 @@ var f = () => {
   }); 
     
   let shareBaseTitleElem = document.createElement("th");
-  shareBaseTitleElem.innerHTML = 'Cost per Share';
+  let shareBaseTitleSpan = document.createElement("span");
+  shareBaseTitleSpan.className = 'sortable-label';
+  shareBaseTitleSpan.innerHTML = 'Cost per Share';
+  shareBaseTitleElem.appendChild(shareBaseTitleSpan);
   parent.insertBefore(shareBaseTitleElem, ths[lastIndex + 1]);
 };
 
