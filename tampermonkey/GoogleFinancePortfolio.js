@@ -23,6 +23,7 @@ var f = () => {
           sharesIndex = i;
           break;
         case 'Cost per Share':
+          lastIndex = costIndex = sharesIndex = undefined;
           return;
       }
     }
