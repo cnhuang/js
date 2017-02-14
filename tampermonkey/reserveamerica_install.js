@@ -9,8 +9,8 @@
 // @grant        none
 // ==/UserScript==
 
-const USER_NAME = 'cnhuang@gmail.com';
-const PASSWORD = 'g3sj61u3';
+const USER_NAME = '';
+const PASSWORD = '';
 const CAMP_URL = 'http://www.reserveamerica.com/switchBookingAction.do?contractCode=NRSO&parkId=70928&siteId=203394&camparea=82267465&arvdate=03%2F31%2F2017&lengthOfStay=2&dateChosen=true';
 const NUM_OCCUPANTS = 1;
 const NUM_VEHICLES = 1;
