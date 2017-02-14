@@ -1,5 +1,5 @@
 
-var f = function() {
+const f = () => {
   let parent = document.querySelector('.portfolio-header-row');
   if (!parent)
     return;
@@ -46,7 +46,7 @@ var f = function() {
   }); 
 };
 
-ff() {
+const ff = () => {
   f();
   window.setTimeout(ff, 5000);
 }
