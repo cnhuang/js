@@ -6,7 +6,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/fuermosijibenyanyifadiwuji/', 13, 'Elementary V'),
   SHOW('http://www.tw116.com/occident/xinfuermosishentanxialuokedisiji/', 3, 'English Homels'),
   SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 12, '罪恶黑名单'),
-  SHOW('http://www.tw116.com/occident/tianxiedisanji/', 13, 'scopin III'), //# -1. e.g. 10 will block to 11
+  SHOW('http://www.tw116.com/occident/tianxiedisanji/', 14, 'scopin III'), 
   SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 11, 'shield IV'),
   SHOW('http://www.tw116.com/occident/mangdiandierji/', 9, 'Blind spot II'),
   SHOW('http://www.tw116.com/occident/jiexikaqiongsidiyiji/', 0, 'Jones'),
