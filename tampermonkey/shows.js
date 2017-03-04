@@ -89,4 +89,5 @@ movieData = [
   SHOW('Moana'),
   SHOW('http://www.tw116.com/drama/jiandietongmeng/', ''),
   SHOW('http://www.tw116.com/drama/yincangrenwu/', ''),
+  SHOW('Power Rangers'),
 ];
