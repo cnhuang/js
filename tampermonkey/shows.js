@@ -92,4 +92,5 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/taikonglvke/', 'Power Rangers'),
   SHOW('http://www.tw116.com/comedy/BJdanshenriji3BJdehaizi/'),
   SHOW('Ghost In The Shell'),
+  SHOW('http://www.tw116.com/anime/konglongdangjia/'),
 ];
