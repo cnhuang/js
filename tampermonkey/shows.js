@@ -93,4 +93,5 @@ movieData = [
   SHOW('http://www.tw116.com/comedy/BJdanshenriji3BJdehaizi/'),
   SHOW('Ghost In The Shell'),
   SHOW('http://www.tw116.com/anime/konglongdangjia/'),
+  SHOW('http://www.tw116.com/action/jingangkuloudao/'),
 ];
