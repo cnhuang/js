@@ -85,7 +85,7 @@ movieData = [
   SHOW('http://www.tw116.com/drama/huanlehaoshengyin/', '', 'Sing'),
   SHOW('http://www.tw116.com/fiction/jianglin/', '1', 'Arrival'),
   SHOW('John Wick: Chapter 2'),
-  SHOW('Passengers'),
+  SHOW('http://www.tw116.com/fiction/taikonglvke/', 'Passengers'),
   SHOW('Moana'),
   SHOW('http://www.tw116.com/drama/jiandietongmeng/', ''),
   SHOW('http://www.tw116.com/drama/yincangrenwu/', ''),
