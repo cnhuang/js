@@ -104,4 +104,5 @@ movieData = [
   SHOW('http://www.tw116.com/war/bililinendezhongchangzhanshi/'),
   SHOW('Life'),
   SHOW('http://www.tw116.com/anime/haidizongdongyuanhaidiqibingxunzhaonimo/'),
+  SHOW('http://www.tw116.com/anime/mofajinglingjumo/'),
 ];
