@@ -108,4 +108,5 @@ movieData = [
   SHOW('Justice League'),
   SHOW('http://www.tw116.com/anime/chaorentegongdui/'),
   SHOW('http://www.tw116.com/romance/pengranxindong/'),
+  SHOW('Get Out'),
 ];
