@@ -110,4 +110,5 @@ movieData = [
   SHOW('http://www.tw116.com/romance/pengranxindong/'),
   SHOW('Get Out'),
   SHOW('http://www.tw116.com/horror/kanbujiandekeren/'),
+  SHOW('http://www.tw116.com/drama/xiongshimanmanhuijialu/'),
 ];
