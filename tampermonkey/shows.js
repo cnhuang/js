@@ -126,5 +126,6 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/waliangzuofen/'),
   SHOW('http://www.tw116.com/fiction/xunigeming/'),
   SHOW('wonder woman'),
+  SHOW('http://www.tw116.com/horror/songzangren/'),
   
 ];
