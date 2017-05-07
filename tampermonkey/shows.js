@@ -114,6 +114,16 @@ movieData = [
   //SHOW('http://www.tw116.com/action/jinganglang3shusiyizhan/', '', '《金刚狼3殊死一战》'),
   SHOW('circle'),
   SHOW('alience'),
-  SHOW('guardience of galaxy 2'),
+  SHOW('http://www.tw116.com/action/yinhehuweidui2/', '', 'guardience of galaxy 2'),
   SHOW('antman 2'),
+  SHOW('http://www.tw116.com/action/jixiantegong3zhongjihuigui/', '', '極限特工3'),
+  SHOW('http://www.tw116.com/action/tiequan/', '', ''),
+  SHOW('http://www.tw116.com/action/yixingjuexingwaixingshengming/', '', 'Life'),
+  SHOW('http://www.tw116.com/fiction/gongkejidongduizhenrenban/', '', '攻殼機動隊真人版'),
+  SHOW('http://www.tw116.com/fiction/sanjiao/'),
+  SHOW('http://www.tw116.com/fiction/shouhuzheshijizhanyuan/'),
+  SHOW('http://www.tw116.com/fiction/tezhongbuduihuishimiejin/', '', 'Call of duty'),
+  SHOW('http://www.tw116.com/fiction/waliangzuofen/'),
+  SHOW('http://www.tw116.com/fiction/xunigeming/'),
+  
 ];
