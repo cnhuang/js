@@ -133,30 +133,18 @@ movieData = [
 
 
 cartoonData = [
-  SHOW('http://www.tw116.com/drama/qihuansenlin/'),
   SHOW('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
-  SHOW('http://www.tw116.com/fiction/ailisimengyouxianjing2/'),
   SHOW('http://www.tw116.com/drama/jinqianguaishou/'),
-  SHOW('http://www.tw116.com/action/lieshendongrizhizhan/'),
   SHOW('http://www.tw116.com/fiction/chuimengjuren/'),
   SHOW('http://www.tw116.com/action/taishanguilaixianzhanconglin/'),
 
   SHOW('http://www.tw116.com/anime/aichongdajimi/'),
-  SHOW('http://www.tw116.com/action/lueduozhe/'),
-  
-  SHOW('http://www.tw116.com/horror/shiti/'),
   SHOW('http://www.tw116.com/action/changchengwanlichangcheng/'),
   SHOW('http://www.tw116.com/action/jinganglang2/'),
-  SHOW('http://www.tw116.com/action/mingxuanyixian/'),
-  SHOW('http://www.tw116.com/action/morihuixuan/'),
-  SHOW('http://www.tw116.com/action/yindiannabolisihaoyongzhewuju/'),
   SHOW('http://www.tw116.com/fiction/chaonengansidui/'),
-  SHOW('http://www.tw116.com/fiction/renleiqingchujihua3/'),
 
   SHOW('http://www.tw116.com/anime/bingxueqiyuan/'),
-  SHOW('http://www.tw116.com/anime/conglindafangong/'),
   SHOW('http://www.tw116.com/anime/conglindafangong2/'),
-  SHOW('http://www.tw116.com/anime/conglindafangong3/'),
   SHOW('http://www.tw116.com/anime/conglindafangong4/'),
   SHOW('http://www.tw116.com/anime/fengkuangdongwucheng/'),
   SHOW('http://www.tw116.com/anime/saichezongdongyuan2fandouchewang2qichezongdongyuan2feichezhengchuan2/'),
