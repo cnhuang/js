@@ -56,6 +56,7 @@ class MyTw116 {
   init () {    
     let tvData;
     let movieData;
+    let catoonData;
     const init_ = () => {
       this.tabs = {};
 
@@ -63,7 +64,8 @@ class MyTw116 {
       this.bodyContainer = Util.appendNewElement(this.parentDiv);
 
       this.loadTvTab(tvData);
-      this.loadMovieTab(movieData);
+      this.loadMovieTab(movieData, 'Movies');
+      this.loadMovieTab(catoonData, 'Cartoon');
 
       this.addToolBar();
       this.openTab(this.selectedTab);
@@ -74,7 +76,7 @@ class MyTw116 {
   }
   
   // Movie Tab
-  loadMovieTab(data) {
+  loadMovieTab(data, tabName) {
     const render = (show, episodes) => {      
       const showName = this.getShowName(show, episodes);
       const hasWatched = episodes.find((e) => e.watched);
@@ -89,7 +91,7 @@ class MyTw116 {
       }
       return html;
     };
-    return this.addTab(data, render, 'movie', 'Movies');
+    return this.addTab(data, render, tabName, tabName);
   }
 
   // TV Tab
