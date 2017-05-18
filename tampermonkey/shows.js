@@ -127,6 +127,48 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/xunigeming/'),
   SHOW('wonder woman'),
   SHOW('http://www.tw116.com/horror/songzangren/'),
-  SHOW('Captain America'),
+  SHOW('Captain America3'),
+  
+];
+
+
+cartoonData = [
+  SHOW('http://www.tw116.com/drama/qihuansenlin/'),
+  SHOW('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
+  SHOW('http://www.tw116.com/fiction/ailisimengyouxianjing2/'),
+  SHOW('http://www.tw116.com/drama/jinqianguaishou/'),
+  SHOW('http://www.tw116.com/action/lieshendongrizhizhan/'),
+  SHOW('http://www.tw116.com/fiction/chuimengjuren/'),
+  SHOW('http://www.tw116.com/action/taishanguilaixianzhanconglin/'),
+
+  SHOW('http://www.tw116.com/anime/aichongdajimi/'),
+  SHOW('http://www.tw116.com/action/lueduozhe/'),
+  
+  SHOW('http://www.tw116.com/horror/shiti/'),
+  SHOW('http://www.tw116.com/action/changchengwanlichangcheng/'),
+  SHOW('http://www.tw116.com/action/jinganglang2/'),
+  SHOW('http://www.tw116.com/action/mingxuanyixian/'),
+  SHOW('http://www.tw116.com/action/morihuixuan/'),
+  SHOW('http://www.tw116.com/action/yindiannabolisihaoyongzhewuju/'),
+  SHOW('http://www.tw116.com/fiction/chaonengansidui/'),
+  SHOW('http://www.tw116.com/fiction/renleiqingchujihua3/'),
+
+  SHOW('http://www.tw116.com/anime/bingxueqiyuan/'),
+  SHOW('http://www.tw116.com/anime/conglindafangong/'),
+  SHOW('http://www.tw116.com/anime/conglindafangong2/'),
+  SHOW('http://www.tw116.com/anime/conglindafangong3/'),
+  SHOW('http://www.tw116.com/anime/conglindafangong4/'),
+  SHOW('http://www.tw116.com/anime/fengkuangdongwucheng/'),
+  SHOW('http://www.tw116.com/anime/saichezongdongyuan2fandouchewang2qichezongdongyuan2feichezhengchuan2/'),
+  SHOW('http://www.tw116.com/anime/qichezongdongyuansaichezongdongyuan/'),
+  SHOW('http://www.tw116.com/Legion/'),
+  SHOW('http://www.tw116.com/drama/huanlehaoshengyin/', '', 'Sing'),
+  SHOW('http://www.tw116.com/anime/konglongdangjia/'),
+  SHOW('http://www.tw116.com/romance/meinvyuyeshou2017/'),
+  SHOW('http://www.tw116.com/drama/xiaojian/'),
+  SHOW('http://www.tw116.com/anime/haidizongdongyuanhaidiqibingxunzhaonimo/', '', '《海底总动员'),
+  SHOW('http://www.tw116.com/anime/mofajinglingjumo/', '', 'Troll 魔法精灵/巨魔'),
+  SHOW('http://www.tw116.com/anime/chaorentegongdui/', '', '超人特攻队'),
+  SHOW('http://www.tw116.com/anime/guaishoudaxueguaiwugongsi2guaiwudaxue/', '', '怪兽大学怪物公司2怪物大学'),
   
 ];
