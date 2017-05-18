@@ -37,9 +37,9 @@ tvData = [
 movieData = [
   //SHOW('http://www.tw116.com/action/bianfuxiadazhanchaorenzhengyiliming/', 1),
   SHOW('http://www.tw116.com/drama/qihuansenlin/'),
-  SHOW('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
+  //SHOW('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
   SHOW('http://www.tw116.com/fiction/ailisimengyouxianjing2/'),
-  SHOW('http://www.tw116.com/drama/jinqianguaishou/'),
+  SHOW('http://www.tw116.com/drama/jinqianguaishou/', '', 'Money monster'),
   //SHOW('http://www.tw116.com/horror/zhaohun2/', 1),
   SHOW('http://www.tw116.com/action/lieshendongrizhizhan/'),
   SHOW('http://www.tw116.com/fiction/chuimengjuren/'),
@@ -133,14 +133,11 @@ movieData = [
 
 
 cartoonData = [
-  SHOW('http://www.tw116.com/fiction/Xzhanjingtianqi/'),
-  SHOW('http://www.tw116.com/drama/jinqianguaishou/'),
   SHOW('http://www.tw116.com/fiction/chuimengjuren/'),
   SHOW('http://www.tw116.com/action/taishanguilaixianzhanconglin/'),
 
   SHOW('http://www.tw116.com/anime/aichongdajimi/'),
   SHOW('http://www.tw116.com/action/changchengwanlichangcheng/'),
-  SHOW('http://www.tw116.com/action/jinganglang2/'),
   SHOW('http://www.tw116.com/fiction/chaonengansidui/'),
 
   SHOW('http://www.tw116.com/anime/bingxueqiyuan/'),
@@ -149,11 +146,9 @@ cartoonData = [
   SHOW('http://www.tw116.com/anime/fengkuangdongwucheng/'),
   SHOW('http://www.tw116.com/anime/saichezongdongyuan2fandouchewang2qichezongdongyuan2feichezhengchuan2/'),
   SHOW('http://www.tw116.com/anime/qichezongdongyuansaichezongdongyuan/'),
-  SHOW('http://www.tw116.com/Legion/'),
   SHOW('http://www.tw116.com/drama/huanlehaoshengyin/', '', 'Sing'),
   SHOW('http://www.tw116.com/anime/konglongdangjia/'),
   SHOW('http://www.tw116.com/romance/meinvyuyeshou2017/'),
-  SHOW('http://www.tw116.com/drama/xiaojian/'),
   SHOW('http://www.tw116.com/anime/haidizongdongyuanhaidiqibingxunzhaonimo/', '', '《海底总动员'),
   SHOW('http://www.tw116.com/anime/mofajinglingjumo/', '', 'Troll 魔法精灵/巨魔'),
   SHOW('http://www.tw116.com/anime/chaorentegongdui/', '', '超人特攻队'),
