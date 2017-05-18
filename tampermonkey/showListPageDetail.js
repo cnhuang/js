@@ -56,7 +56,7 @@ class MyTw116 {
   init () {    
     let tvData;
     let movieData;
-    let catoonData;
+    let cartoonData;
     const init_ = () => {
       this.tabs = {};
 
@@ -65,7 +65,7 @@ class MyTw116 {
 
       this.loadTvTab(tvData);
       this.loadMovieTab(movieData, 'Movies');
-      this.loadMovieTab(catoonData, 'Cartoon');
+      this.loadMovieTab(cartoonData, 'Cartoon');
 
       this.addToolBar();
       this.openTab(this.selectedTab);
