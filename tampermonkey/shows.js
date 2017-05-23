@@ -64,6 +64,8 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/waliangzuofen/'),
   SHOW('http://www.tw116.com/fiction/xunigeming/'),
   SHOW('http://www.tw116.com/horror/songzangren/'),
+  SHOW('http://www.tw116.com/horror/lvsediyu/', '', '綠色地獄'),
+  SHOW('http://www.tw116.com/horror/wannenyuechi/', '' ,'萬能鑰匙'),
   SHOW('The Lego Batman Movie'),
   SHOW('Split'),
   SHOW('xXx: Return of Xander Cage'),
