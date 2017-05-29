@@ -135,5 +135,5 @@ cartoonData = [
   SHOW('http://www.tw116.com/anime/mofajinglingjumo/', '', 'Troll 魔法精灵/巨魔'),
   SHOW('http://www.tw116.com/anime/chaorentegongdui/', '', '超人特攻队'),
   SHOW('http://www.tw116.com/anime/guaishoudaxueguaiwugongsi2guaiwudaxue/', '', '怪兽大学怪物公司2怪物大学'),
-  
+  SHOW('http://www.tw116.com/anime/legaobianfuxiadadianying/', ''),
 ];
