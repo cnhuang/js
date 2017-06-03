@@ -75,7 +75,7 @@ movieData = [
   SHOW('the Belko Experiment 2017'),
   SHOW('Life'),
   SHOW('Justice League'),
-  SHOW('Get Out'),
+  SHOW('http://www.tw116.com/drama/taochujuemingzhen/', '', 'Get Out'),
   SHOW('circle'),
   SHOW('alien'),
   SHOW('antman 2'),
