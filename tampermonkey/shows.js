@@ -31,6 +31,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/meiguokongbugushidiwuji/', 0, '美国恐怖故事第五季'),
   SHOW('http://www.tw116.com/occident/baifenzhisandiyiji/', 0, '3%'),
   SHOW('http://www.tw116.com/occident/daqundiyiji/', 0, '大群/變種軍團'),
+  SHOW('http://www.tw116.com/occident/shisangeyuanyindiyiji/', 0, ''),
 ];
 
 movieData = [
