@@ -83,6 +83,8 @@ movieData = [
   //SHOW('http://www.tw116.com/drama/tiancaishaonvtiancaitiancaideliwu/', '', 'gifted'),
   SHOW('ape planet'),
   SHOW('Dark tower'),
+  SHOW('The mummy'),
+  SHOW('Spider man'),
   
   //SHOW('http://www.tw116.com/fiction/tezhongbuduihuishimiejin/', '', 'Call of duty'),
   //SHOW('http://www.tw116.com/anime/konglongdangjia/'),
