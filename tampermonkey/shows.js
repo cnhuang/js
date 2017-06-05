@@ -80,7 +80,9 @@ movieData = [
   SHOW('antman 2'),
   SHOW('wonder woman'),
   SHOW('Captain America3'),
-  SHOW('http://www.tw116.com/drama/tiancaishaonvtiancaitiancaideliwu/', '', 'gifted'),
+  //SHOW('http://www.tw116.com/drama/tiancaishaonvtiancaitiancaideliwu/', '', 'gifted'),
+  SHOW('ape planet'),
+  SHOW('Dark tower'),
   
   //SHOW('http://www.tw116.com/fiction/tezhongbuduihuishimiejin/', '', 'Call of duty'),
   //SHOW('http://www.tw116.com/anime/konglongdangjia/'),
