@@ -8,7 +8,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/xinfuermosishentanxialuokedisiji/', 3, 'English Homels'),
   SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 15, '罪恶黑名单'),
   SHOW('http://www.tw116.com/occident/tianxiedisanji/', 14, 'scopin III'), 
-  SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 17, 'shield IV'),
+  SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 22, 'shield IV'),
   SHOW('http://www.tw116.com/occident/mangdiandierji/', 18, 'Blind spot II'),
   SHOW('http://www.tw116.com/occident/jiexikaqiongsidiyiji/', 0, 'Jones'),
   SHOW('http://www.tw116.com/occident/lukekaiqidiyiji/', 8, 'Luke Cage'),
@@ -30,7 +30,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/meiguokongbugushijixingxiumeiguoguaitandisiji/', 18, '美国恐怖故事：畸形秀'),
   SHOW('http://www.tw116.com/occident/meiguokongbugushidiwuji/', 0, '美国恐怖故事第五季'),
   SHOW('http://www.tw116.com/occident/baifenzhisandiyiji/', 0, '3%'),
-  SHOW('http://www.tw116.com/occident/daqundiyiji/', 0, '大群/變種軍團'),
+  SHOW('http://www.tw116.com/occident/daqundiyiji/', 5, '大群/變種軍團'),
   SHOW('http://www.tw116.com/occident/shisangeyuanyindiyiji/', 0, ''),
 ];
 
