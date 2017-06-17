@@ -9,7 +9,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 15, '罪恶黑名单'),
   SHOW('http://www.tw116.com/occident/tianxiedisanji/', 14, 'scopin III'), 
   SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 22, 'shield IV'),
-  SHOW('http://www.tw116.com/occident/mangdiandierji/', 18, 'Blind spot II'),
+  SHOW('http://www.tw116.com/occident/mangdiandierji/', 20, 'Blind spot II'),
   SHOW('http://www.tw116.com/occident/jiexikaqiongsidiyiji/', 0, 'Jones'),
   SHOW('http://www.tw116.com/occident/lukekaiqidiyiji/', 8, 'Luke Cage'),
   SHOW('http://www.tw116.com/occident/shikongshouweikuashikongzhuibudiyiji/', 16, '時空守衛 Timeless'),
@@ -22,7 +22,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/guaiqiwuyudiyiji/', 8, 'Stanger things I'),
   SHOW('http://www.tw116.com/occident/lvxingzhechuanyuezhediyiji/', 12, '旅行者/穿越者第一季'),
   SHOW('http://www.tw116.com/mainland/guichuidengzhijingjuegucheng/', 0, ''),
-  SHOW('http://www.tw116.com/occident/heijingdisanji/', 0, 'black mirror S3'),
+  SHOW('http://www.tw116.com/occident/heijingdisanji/', 4, 'black mirror S3'),
   SHOW('http://www.tw116.com/occident/shuishixiongshoudiyijiwomenzhizhongdiyiji/', 0, '誰是兇手'),
   SHOW('http://www.tw116.com/occident/shandianxiadiyiji/', 0 ,'Flash III'), 
   SHOW('http://www.tw116.com/occident/heikejuntuandiyiji/', 0, 'Mr. Robot'),
@@ -30,7 +30,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/meiguokongbugushijixingxiumeiguoguaitandisiji/', 18, '美国恐怖故事：畸形秀'),
   SHOW('http://www.tw116.com/occident/meiguokongbugushidiwuji/', 0, '美国恐怖故事第五季'),
   SHOW('http://www.tw116.com/occident/baifenzhisandiyiji/', 0, '3%'),
-  SHOW('http://www.tw116.com/occident/daqundiyiji/', 5, '大群/變種軍團'),
+  SHOW('http://www.tw116.com/occident/daqundiyiji/', 8, '大群/變種軍團'),
   SHOW('http://www.tw116.com/occident/shisangeyuanyindiyiji/', 0, ''),
 ];
 
