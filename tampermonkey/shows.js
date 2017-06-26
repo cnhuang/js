@@ -86,6 +86,7 @@ movieData = [
   SHOW('Dark tower'),
   SHOW('The mummy'),
   SHOW('Spider man'),
+  SHOW('http://www.tw116.com/action/bahuobaliwangkaiduanshang/'),
   
   //SHOW('http://www.tw116.com/fiction/tezhongbuduihuishimiejin/', '', 'Call of duty'),
   //SHOW('http://www.tw116.com/anime/konglongdangjia/'),
