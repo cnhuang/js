@@ -4,9 +4,9 @@ const SHOW = (url, done = 0, name = undefined) => ({url, name, done});
 // Data
 tvData = [
   SHOW('http://www.tw116.com/occident/tiequandiyiji/', 13, 'iron feast'),
-  SHOW('http://www.tw116.com/occident/fuermosijibenyanyifadiwuji/', 20, 'Elementary V'),
+  SHOW('http://www.tw116.com/occident/fuermosijibenyanyifadiwuji/', 24, 'Elementary V'),
   SHOW('http://www.tw116.com/occident/xinfuermosishentanxialuokedisiji/', 3, 'English Homels'),
-  SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 15, '罪恶黑名单'),
+  SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 21, '罪恶黑名单'),
   SHOW('http://www.tw116.com/occident/tianxiedisanji/', 14, 'scopin III'), 
   SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 22, 'shield IV'),
   SHOW('http://www.tw116.com/occident/mangdiandierji/', 20, 'Blind spot II'),
