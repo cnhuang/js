@@ -88,6 +88,7 @@ movieData = [
   SHOW('The mummy'),
   SHOW('Spider man'),
   SHOW('http://www.tw116.com/action/bahuobaliwangkaiduanshang/'),
+  SHOW('Geostorm'),
   
   //SHOW('http://www.tw116.com/fiction/tezhongbuduihuishimiejin/', '', 'Call of duty'),
   //SHOW('http://www.tw116.com/anime/konglongdangjia/'),
