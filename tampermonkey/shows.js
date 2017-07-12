@@ -89,6 +89,7 @@ movieData = [
   SHOW('Spider man'),
   SHOW('http://www.tw116.com/action/bahuobaliwangkaiduanshang/'),
   SHOW('Geostorm'),
+  SHOW('Valerain'),
   
   //SHOW('http://www.tw116.com/fiction/tezhongbuduihuishimiejin/', '', 'Call of duty'),
   //SHOW('http://www.tw116.com/anime/konglongdangjia/'),
