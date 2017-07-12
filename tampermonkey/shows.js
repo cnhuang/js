@@ -33,6 +33,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/daqundiyiji/', 8, '大群/變種軍團'),
   SHOW('http://www.tw116.com/occident/shisangeyuanyindiyiji/', 0, ''),
   SHOW('http://www.tw116.com/occident/daxiaohuangyanxiaohuangdashidiyiji/', 0, ''),
+  SHOW('http://www.tw116.com/occident/miwudiyiji/', 0, ''),
 ];
 
 movieData = [
