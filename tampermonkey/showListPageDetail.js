@@ -84,21 +84,9 @@ class MyTw116 {
 
       let html = `<div><a target=_blank href='${show.url}' style="${watchedStyle}">${showName}</a></div>`;
       if (!hasWatched) {
-        let watchedQueue = [];
         episodes.forEach((e) => {
           const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
-          const str = `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
-          if (e.watched) {
-            watchedQueue.push(str)
-          } else {
-            const i = 0;
-            while (watchedQueue.length && i < 3) {          
-              html += watchedQueue.shift();
-              i++;
-            }
-            watchedQueue = [];
-            html += str;
-          }
+          html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
         });
       }
       return html;
@@ -112,9 +100,21 @@ class MyTw116 {
       const showName = this.getShowName(show, episodes);
 
       let html = `<div><a target=_blank href='${show.url}'>${showName} (${show.id})</a></div>`;
+      let watchedQueue = [];
       episodes.forEach((e) => {
         const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
-        html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
+        const str = `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
+        if (e.watched) {
+          watchedQueue.push(str)
+        } else {
+          const i = 0;
+          while (watchedQueue.length && i < 3) {          
+            html += watchedQueue.shift();
+            i++;
+          }
+          watchedQueue = [];
+          html += str;
+        }
       });
       return html;
     };
