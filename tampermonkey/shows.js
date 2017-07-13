@@ -21,7 +21,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/bingyuhuozhigequanlideyouxidiliuji/' , 10, 'Game of Throne 6'),
   SHOW('http://www.tw116.com/occident/guaiqiwuyudiyiji/', 8, 'Stanger things I'),
   SHOW('http://www.tw116.com/occident/lvxingzhechuanyuezhediyiji/', 12, '旅行者/穿越者第一季'),
-  SHOW('http://www.tw116.com/mainland/guichuidengzhijingjuegucheng/', 0, ''),
+  //SHOW('http://www.tw116.com/mainland/guichuidengzhijingjuegucheng/', 0, ''),
   SHOW('http://www.tw116.com/occident/heijingdisanji/', 4, 'black mirror S3'),
   SHOW('http://www.tw116.com/occident/shuishixiongshoudiyijiwomenzhizhongdiyiji/', 0, '誰是兇手'),
   SHOW('http://www.tw116.com/occident/shandianxiadiyiji/', 0 ,'Flash III'), 
@@ -31,7 +31,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/meiguokongbugushidiwuji/', 0, '美国恐怖故事第五季'),
   SHOW('http://www.tw116.com/occident/baifenzhisandiyiji/', 0, '3%'),
   SHOW('http://www.tw116.com/occident/daqundiyiji/', 8, '大群/變種軍團'),
-  SHOW('http://www.tw116.com/occident/shisangeyuanyindiyiji/', 0, ''),
+  SHOW('http://www.tw116.com/occident/shisangeyuanyindiyiji/', 13, '13 reasons'),
   SHOW('http://www.tw116.com/occident/daxiaohuangyanxiaohuangdashidiyiji/', 3, ''),
   SHOW('http://www.tw116.com/occident/miwudiyiji/', 0, ''),
 ];
