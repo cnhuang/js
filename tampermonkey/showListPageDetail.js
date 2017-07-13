@@ -114,7 +114,7 @@ class MyTw116 {
       
       let i = 0;
       while (watchedQueue.length && i < 3) {          
-        html += watchedQueue.pop();
+        html += watchedQueue.shift();
         i++;
       }
       while (unWatchedQueue.length) {          
