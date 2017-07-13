@@ -6,10 +6,10 @@ tvData = [
   SHOW('http://www.tw116.com/occident/tiequandiyiji/', 13, 'iron feast'),
   SHOW('http://www.tw116.com/occident/fuermosijibenyanyifadiwuji/', 24, 'Elementary V'),
   SHOW('http://www.tw116.com/occident/xinfuermosishentanxialuokedisiji/', 3, 'English Homels'),
-  SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 21, '罪恶黑名单'),
+  SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 22, '罪恶黑名单'),
   SHOW('http://www.tw116.com/occident/tianxiedisanji/', 14, 'scopin III'), 
   SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 22, 'shield IV'),
-  SHOW('http://www.tw116.com/occident/mangdiandierji/', 20, 'Blind spot II'),
+  SHOW('http://www.tw116.com/occident/mangdiandierji/', 22, 'Blind spot II'),
   SHOW('http://www.tw116.com/occident/jiexikaqiongsidiyiji/', 0, 'Jones'),
   SHOW('http://www.tw116.com/occident/lukekaiqidiyiji/', 8, 'Luke Cage'),
   SHOW('http://www.tw116.com/occident/shikongshouweikuashikongzhuibudiyiji/', 16, '時空守衛 Timeless'),
@@ -32,7 +32,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/baifenzhisandiyiji/', 0, '3%'),
   SHOW('http://www.tw116.com/occident/daqundiyiji/', 8, '大群/變種軍團'),
   SHOW('http://www.tw116.com/occident/shisangeyuanyindiyiji/', 0, ''),
-  SHOW('http://www.tw116.com/occident/daxiaohuangyanxiaohuangdashidiyiji/', 0, ''),
+  SHOW('http://www.tw116.com/occident/daxiaohuangyanxiaohuangdashidiyiji/', 3, ''),
   SHOW('http://www.tw116.com/occident/miwudiyiji/', 0, ''),
 ];
 
