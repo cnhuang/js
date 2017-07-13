@@ -101,21 +101,25 @@ class MyTw116 {
 
       let html = `<div><a target=_blank href='${show.url}'>${showName} (${show.id})</a></div>`;
       let watchedQueue = [];
+      let unWatchedQueue = [];
       episodes.forEach((e) => {
         const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
         const str = `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
         if (e.watched) {
           watchedQueue.push(str)
         } else {
-          let i = 0;
-          while (watchedQueue.length && i < 3) {          
-            html += watchedQueue.shift();
-            i++;
-          }
-          watchedQueue = [];
-          html += str;
+          unWatchedQueue.push(str);
         }
       });
+      
+      let i = 0;
+      while (watchedQueue.length && i < 3) {          
+        html += watchedQueue.shift();
+        i++;
+      }
+      while (unWatchedQueue.length) {          
+        html += watchedQueue.pop();
+      }
       return html;
     };
     return this.addTab(data, render, 'tv', 'TV');
