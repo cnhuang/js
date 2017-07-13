@@ -91,8 +91,10 @@ class MyTw116 {
           if (e.watched) {
             watchedQueue.push(str)
           } else {
-            while (watchedQueue.length) {          
-              html += watchedQueue.pop();
+            const i = 0;
+            while (watchedQueue.length && i < 3) {          
+              html += watchedQueue.shift();
+              i++;
             }
             watchedQueue = [];
             html += str;
