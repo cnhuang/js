@@ -114,11 +114,11 @@ class MyTw116 {
       
       let i = 0;
       while (watchedQueue.length && i < 3) {          
-        html += watchedQueue.shift();
+        html += watchedQueue.pop();
         i++;
       }
       while (unWatchedQueue.length) {          
-        html += unWatchedQueue.pop();
+        html += unWatchedQueue.shift();
       }
       return html;
     };
