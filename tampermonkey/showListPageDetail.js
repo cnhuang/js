@@ -112,10 +112,9 @@ class MyTw116 {
         }
       });
       
-      let i = 0;
-      while (watchedQueue.length && i < 3) {          
-        html += watchedQueue.shift();
-        i++;
+      let i = math.Max(0, watchedQueue.length - 3);
+      while (watchedQueue.length && i < watchedQueue.length) {          
+        html += watchedQueue[i++];
       }
       while (unWatchedQueue.length) {          
         html += unWatchedQueue.shift();
