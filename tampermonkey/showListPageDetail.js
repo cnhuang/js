@@ -84,9 +84,19 @@ class MyTw116 {
 
       let html = `<div><a target=_blank href='${show.url}' style="${watchedStyle}">${showName}</a></div>`;
       if (!hasWatched) {
+        let watchedQueue = [];
         episodes.forEach((e) => {
           const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
-          html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
+          const str = `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
+          if (e.watched) {
+            watchedQueue.push(str)
+          } else {
+            while (watchedQueue.length) {          
+              html += watchedQueue.pop();
+            }
+            watchedQueue = [];
+            html += str;
+          }
         });
       }
       return html;
