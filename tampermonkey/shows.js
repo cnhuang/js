@@ -82,6 +82,7 @@ movieData = [
   SHOW('http://www.tw116.com/war/bahuobaliwangxiazhongjie/', '' ,''),
   SHOW('valerian and the city of a thousand planets', '', 'bahuobali 2'),
   SHOW('http://www.tw116.com/vip/baiduren/', '', '擺渡人'),
+  SHOW('http://www.tw116.com/drama/paodiaotianhou/'),
   SHOW('Mom'),
   SHOW('Geostorm'),
   SHOW('Spider man'),
