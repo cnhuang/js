@@ -34,7 +34,8 @@ tvData = [
   SHOW('http://www.tw116.com/occident/shisangeyuanyindiyiji/', 13, '13 reasons'),
   SHOW('http://www.tw116.com/occident/daxiaohuangyanxiaohuangdashidiyiji/', 3, ''),
   SHOW('http://www.tw116.com/occident/miwudiyiji/', 0, ''),
-  SHOW('http://www.tw116.com/occident/heianwuzhidiyiji/', 0, 'Dark matters'),
+  SHOW('http://www.tw116.com/occident/heianwuzhidierji/', 0, 'Dark matters2'),
+  SHOW('http://www.tw116.com/occident/heianwuzhidisanji/', 0, 'Dark matters3'),
 ];
 
 movieData = [
