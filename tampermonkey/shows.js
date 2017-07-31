@@ -17,7 +17,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/xibushijiediyiji/', 10, 'West World'),
   SHOW('http://www.tw116.com/occident/tegongkatedierji/', 10, 'Agent carter'),
   SHOW('http://www.tw116.com/occident/Xdangandishiji/', 6, 'X File'),
-  SHOW('http://www.tw116.com/occident/shierhouzidierji/', 13, '12 Monkeys'),
+  SHOW('http://www.tw116.com/occident/shierhouzidisanji/', 0, '12 Monkeys'),
   SHOW('http://www.tw116.com/occident/bingyuhuozhigequanlideyouxidiqiji/' , 0, 'Game of Throne 7'),
   SHOW('http://www.tw116.com/occident/guaiqiwuyudiyiji/', 8, 'Stanger things I'),
   SHOW('http://www.tw116.com/occident/lvxingzhechuanyuezhediyiji/', 12, '旅行者/穿越者第一季'),
