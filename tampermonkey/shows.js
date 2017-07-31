@@ -161,4 +161,5 @@ cartoonData = [
   SHOW('http://www.tw116.com/anime/xunlonggaoshou2xunlongji2/', '', ''),
   SHOW('Captain Underpants'),
   SHOW('http://www.tw116.com/anime/baobeilaobanwawalaoban/'),
+  SHOW('http://www.tw116.com/anime/douniaowaichuanmengbaomantianfeisongziniao/'),
 ];
