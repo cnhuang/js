@@ -26,7 +26,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/shuishixiongshoudiyijiwomenzhizhongdiyiji/', 0, '誰是兇手'),
   SHOW('http://www.tw116.com/occident/shandianxiadiyiji/', 0 ,'Flash III'), 
   SHOW('http://www.tw116.com/occident/heikejuntuandiyiji/', 0, 'Mr. Robot'),
-  SHOW('http://www.tw116.com/occident/xiaoyaofawaidiyiji/', 0, 'Get away with murder'),
+  SHOW('http://www.tw116.com/occident/xiaoyaofawaidierji/', 0, 'Get away with murder'),
   SHOW('http://www.tw116.com/occident/meiguokongbugushijixingxiumeiguoguaitandisiji/', 18, '美国恐怖故事：畸形秀'),
   SHOW('http://www.tw116.com/occident/meiguokongbugushidiwuji/', 0, '美国恐怖故事第五季'),
   SHOW('http://www.tw116.com/occident/baifenzhisandiyiji/', 0, '3%'),
