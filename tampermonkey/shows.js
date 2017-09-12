@@ -99,6 +99,7 @@ movieData = [
   SHOW('別闖陰陽界 Flatliners'),
   SHOW('牠 It'),
   SHOW('http://www.tw116.com/fiction/lieshaxingqiyi/'),
+  SHOW('Downsizing'),
   
   //SHOW('http://www.tw116.com/action/bahuobaliwangkaiduanshang/'),
   //SHOW('http://www.tw116.com/drama/tiancaishaonvtiancaitiancaideliwu/', '', 'gifted'),
