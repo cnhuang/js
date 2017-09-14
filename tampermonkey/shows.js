@@ -100,6 +100,7 @@ movieData = [
   SHOW('牠 It'),
   SHOW('http://www.tw116.com/fiction/lieshaxingqiyi/'),
   SHOW('Downsizing'),
+  SHOW('紅雀 Red Sparrow'),
   
   //SHOW('http://www.tw116.com/action/bahuobaliwangkaiduanshang/'),
   //SHOW('http://www.tw116.com/drama/tiancaishaonvtiancaitiancaideliwu/', '', 'gifted'),
