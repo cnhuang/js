@@ -170,5 +170,5 @@ cartoonData = [
   SHOW('http://www.tw116.com/anime/baobeilaobanwawalaoban/'),
   SHOW('http://www.tw116.com/anime/douniaowaichuanmengbaomantianfeisongziniao/'),
   SHOW('http://www.tw116.com/anime/haidizongdongyuan2duoliqunaer/'),
-  SHOW('http://www.tw116.com/anime/haiyangqiyuan/', 0, 'Moana'),
+  SHOW('http://www.tw116.com/anime/haiyangqiyuan/', '', 'Moana'),
 ];
