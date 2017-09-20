@@ -102,6 +102,8 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/lieshaxingqiyi/'),
   SHOW('Downsizing'),
   SHOW('紅雀 Red Sparrow'),
+  SHOW('Geostorm'),
+  SHOW('blade runner 2049'),
   
   //SHOW('http://www.tw116.com/action/bahuobaliwangkaiduanshang/'),
   //SHOW('http://www.tw116.com/drama/tiancaishaonvtiancaitiancaideliwu/', '', 'gifted'),
