@@ -104,6 +104,7 @@ movieData = [
   SHOW('紅雀 Red Sparrow'),
   SHOW('Geostorm'),
   SHOW('blade runner 2049'),
+  SHOW('古墓奇兵 Tomb Raider'),
   
   //SHOW('http://www.tw116.com/action/bahuobaliwangkaiduanshang/'),
   //SHOW('http://www.tw116.com/drama/tiancaishaonvtiancaitiancaideliwu/', '', 'gifted'),
