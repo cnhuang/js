@@ -87,6 +87,7 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/zhizhuxiayingxiongguilai/', '', 'spider man'),
   SHOW('http://www.tw116.com/fiction/xingjitegongqianxingzhicheng/'),
   SHOW('http://www.tw116.com/drama/shenhaihaojie/'),
+  SHOW('http://www.tw116.com/action/xingqiujueqi3zhongjizhizhan/', '猩球崛起3', ''),
   SHOW('Mom'),
   SHOW('Geostorm'),
   SHOW('Dark tower'),
