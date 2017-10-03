@@ -180,4 +180,5 @@ cartoonData = [
   SHOW('http://www.tw116.com/anime/changfagongzhumofaqiyuan/'),
   SHOW('http://www.tw116.com/anime/meishizongdongyuanliaolishuwang/'),
   SHOW('http://www.tw116.com/anime/longmiaogebideteteluo/'),
+  SHOW('http://www.tw116.com/comedy/padingdunxiong/'),
 ];
