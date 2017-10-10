@@ -64,7 +64,6 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/waliangzuofen/'),
   SHOW('http://www.tw116.com/fiction/xunigeming/'),
   SHOW('http://www.tw116.com/horror/songzangren/'),
-  SHOW('http://www.tw116.com/action/jialebihaidao5siwuduizheng/', '', 'Pirate 5'),
   SHOW('http://www.tw116.com/horror/fenliesilie/', '', 'Split'),
   SHOW('http://www.tw116.com/fiction/yixingqiyue/', '', 'alien'),
   SHOW('http://www.tw116.com/vip/xingqiujueqi3zhongjizhizhan/', '', 'ape planet'),
@@ -73,7 +72,6 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/xingjitegongqianxingzhicheng/'),
   SHOW('http://www.tw116.com/action/xingqiujueqi3zhongjizhizhan/', '猩球崛起3', ''),
   SHOW('http://www.tw116.com/action/heianta/', '', 'Dark tower'),
-  SHOW('http://www.tw116.com/drama/beierkeshiyan/', '', 'the Belko Experiment 2017'),
   SHOW('http://www.tw116.com/fiction/lieshaxingqiyi/', '', '獵殺星期1'),
   SHOW('http://www.tw116.com/drama/yuanquan/', '', 'circle'),
   SHOW('Justice League'),
@@ -91,7 +89,9 @@ movieData = [
   SHOW('東方快車謀殺案'),
   SHOW('忌日快樂'),
   SHOW('雪人'),
-  
+
+  //SHOW('http://www.tw116.com/action/jialebihaidao5siwuduizheng/', '', 'Pirate 5'),
+  //SHOW('http://www.tw116.com/drama/beierkeshiyan/', '', 'the Belko Experiment 2017'),
   //SHOW('http://www.tw116.com/war/bahuobaliwangxiazhongjie/', '' ,'bahuobali 2'),
   //SHOW('http://www.tw116.com/fiction/zhizhuxiayingxiongguilai/', '', 'spider man'),
   //SHOW('http://www.tw116.com/drama/shenhaihaojie/'),
