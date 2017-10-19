@@ -36,6 +36,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/miwudiyiji/', 0, ''),
   SHOW('http://www.tw116.com/occident/heianwuzhidisanji/', 10, 'Dark matters3'),
   SHOW('http://www.tw116.com/anime/xunlongjifeiyuebianjiedisanji/', 0, 'train ur dragon'),
+  SHOW('http://www.tw116.com/occident/mingrichuanqidiyiji/', 0, 'legend s1'),
 ];
 
 movieData = [
