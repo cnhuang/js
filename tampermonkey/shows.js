@@ -93,6 +93,7 @@ movieData = [
   SHOW('雪人'),
   SHOW('《野蠻遊戲：瘋狂叢林》最新中文預告登場'),
   SHOW('黑豹'),
+  SHOW('http://www.tw116.com/fiction/zhuluojishijiezhuluojigongyuan4/'),
 
   //SHOW('http://www.tw116.com/action/jialebihaidao5siwuduizheng/', '', 'Pirate 5'),
   //SHOW('http://www.tw116.com/drama/beierkeshiyan/', '', 'the Belko Experiment 2017'),
