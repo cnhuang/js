@@ -38,6 +38,7 @@ tvData = [
   SHOW('http://www.tw116.com/anime/xunlongjifeiyuebianjiedisanji/', 0, 'train ur dragon'),
   SHOW('http://www.tw116.com/occident/mingrichuanqidiyiji/', 1, 'legend s1'),
   SHOW('http://www.tw116.com/occident/yirenzudiyiji/', 0, 'marvels inhuman'),
+  SHOW('http://www.tw116.com/occident/meiguozhongshendiyiji/'),
 ];
 
 movieData = [
