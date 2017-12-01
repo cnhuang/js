@@ -100,6 +100,13 @@ movieData = [
   SHOW('http://www.tw116.com/fiction/zhuluojishijiezhuluojigongyuan4/'),
   SHOW('http://www.tw116.com/drama/tiancaiqiangshou/'),
   SHOW('可可夜總會. 《寻梦环游记》（英语：Coco'),
+  SHOW('ferdinand'),
+  SHOW('jumanji-welcome-to-the-jungle'),
+  SHOW('he-greatest-showman'),
+  SHOW('the-star'),
+  SHOW('the-man-who-invented-christmas'),
+  SHOW('explosion-yin-bao-zhe 引爆者'),
+  
 
   //SHOW('http://www.tw116.com/action/jialebihaidao5siwuduizheng/', '', 'Pirate 5'),
   //SHOW('http://www.tw116.com/drama/beierkeshiyan/', '', 'the Belko Experiment 2017'),
