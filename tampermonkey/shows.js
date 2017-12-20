@@ -106,6 +106,9 @@ movieData = [
   SHOW('the-man-who-invented-christmas'),
   SHOW('explosion-yin-bao-zhe 引爆者'),
   SHOW('移動城市：致命引擎'),
+  SHOW('Star Wars: The Last Jedi - 看預告'),
+  SHOW('《水形物语》/ The Shape of Water - 看預告'),
+  SHOW('《银翼杀手2049》/ Blade Runner 2049 - 看預告'),
   
 
   //SHOW('http://www.tw116.com/action/jialebihaidao5siwuduizheng/', '', 'Pirate 5'),
