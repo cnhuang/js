@@ -205,4 +205,5 @@ cartoonData = [
   SHOW('http://tw116.com/anime/legaobianfuxiadadianying/'),
   SHOW('http://www.tw116.com/anime/xunmenghuanyouji/', '', 'Coco'),
   SHOW('http://www.tw116.com/anime/feiwuhuanyouji/', '', 'UP'),
+  SHOW('http://www.tw116.com/riju/tounaotegongdui/', '', 'Inside out'),
 ];
