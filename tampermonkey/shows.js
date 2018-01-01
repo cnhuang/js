@@ -208,4 +208,7 @@ cartoonData = [
   SHOW('http://www.tw116.com/anime/feiwuhuanyouji/', '', 'UP'),
   SHOW('http://www.tw116.com/riju/tounaotegongdui/', '', 'Inside out'),
   SHOW('http://www.tw116.com/anime/guaiwushiruike/'),
+  SHOW('http://www.tw116.com/anime/guaiwushiruike2/'),
+  SHOW('http://www.tw116.com/anime/guaiwushiruike3/'),
+  SHOW('http://www.tw116.com/anime/guaiwushiruike4/'),
 ];
