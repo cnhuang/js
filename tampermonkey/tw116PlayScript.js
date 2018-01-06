@@ -64,16 +64,11 @@ class MyTw116 {
   loadMovieTab(data) {
     const render = (show, episodes) => {      
       const showName = this.getShowName(show, episodes);
-      const hasWatched = episodes.find((e) => e.watched);
-      const watchedStyle = hasWatched ? 'color: gray;text-decoration: line-through;' : '';
 
-      let html = `<div><a target=_blank href='${show.url}' style="${watchedStyle}">${showName}</a></div>`;
-      if (!hasWatched) {
-        episodes.forEach((e) => {
-          const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
-          html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
-        });
-      }
+      let html = '';
+      episodes.forEach((e) => {
+        html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
+      });
       return html;
     };
     this.addTab(data, render);
@@ -81,7 +76,7 @@ class MyTw116 {
   
   // Utility
   addTab(shows, render) {
-    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
+    const content = Util.appendNewElement(this.bodyContainer);
     this.loadData(content, this.parseData, shows, render);
   }
     
