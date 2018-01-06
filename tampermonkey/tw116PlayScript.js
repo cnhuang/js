@@ -57,7 +57,6 @@ class MyTw116 {
       this.loadMovieTab();
     };
     
-    eval(Util.loadJsText('https://raw.githubusercontent.com/cnhuang/js/master/tampermonkey/shows.js'));
     init_();
   }
   
