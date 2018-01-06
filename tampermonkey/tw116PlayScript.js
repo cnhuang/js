@@ -91,7 +91,7 @@ class MyTw116 {
         const name = tokens[0];
         const url = tokens[1];
         const id = `${index}`;
-        episodes.push({name, url, id, watched});
+        episodes.push({name, url, id});
       });
     }
 
