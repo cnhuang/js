@@ -1,4 +1,5 @@
 
+
 // Utility
 class Util {};
 Util.loadScript = (url, callback) => {
@@ -48,37 +49,85 @@ class MyTw116 {
   constructor(element){
     this.element = element;
     this.parentDiv = this.addParentDiv();
+    this.selectedTab = 'tv';
+    
     this.init();
   }
   
   init () {    
-    const init_ = () => {
-      this.bodyContainer = Util.appendNewElement(this.parentDiv);
-      this.loadMovieTab();
-    };
-    
-    init_();
+    let data = [{url: location.href}];
+    this.bodyContainer = Util.appendNewElement(this.parentDiv);
+    this.loadMovieTab(data);
   }
   
   // Movie Tab
-  loadMovieTab(data, tabName) {
-    const render = (episodes) => {      
-      let html;
-      episodes.forEach((e) => {
-        html += `<span style="padding-right:20px;" id="${e.id}"><a href="${e.url}">${e.name}</a></span>`;
-      });
+  loadMovieTab(data) {
+    const render = (show, episodes) => {      
+      const showName = this.getShowName(show, episodes);
+      const hasWatched = episodes.find((e) => e.watched);
+      const watchedStyle = hasWatched ? 'color: gray;text-decoration: line-through;' : '';
+
+      let html = `<div><a target=_blank href='${show.url}' style="${watchedStyle}">${showName}</a></div>`;
+      if (!hasWatched) {
+        episodes.forEach((e) => {
+          const watchedStyle = e.watched ? 'color: gray;text-decoration: line-through;' : '';
+          html += `<span style="padding-right:20px;" id="${e.id}"><a style="${watchedStyle}" href="${e.url}">${e.name}</a></span>`;
+        });
+      }
       return html;
     };
-    this.addTab(render);
+    this.addTab(data, render);
   }
-
+  
   // Utility
-  addTab(render) {
-    const content = Util.appendNewElement(this.bodyContainer);
-    this.parseData(content, document.documentElement.innerHTML, render);
+  addTab(shows, render) {
+    const content = Util.appendNewElement(this.bodyContainer, {display: 'none'});
+    this.loadData(content, this.parseData, shows, render);
   }
     
-  parseData(parentDiv, content, render) {  
+  loadData(element, parseFunc, shows, render) {
+    const successCallback = (show, content) => {
+      parseFunc(element, show, content, render);
+    };
+
+    const failCallabck = (show, url) => {
+      console.log(`Error loading: ${show.url}`);
+    };
+    
+    const parse = (show) => {
+      const url = `http://www.tw116.com/vod-play-id-${show.id}-sid-0-pid-0.html`;
+      if (!show.url) {
+        show.url = url;
+      }
+      $.get(url, successCallback.bind(this, show))
+          .fail(failCallabck(show));
+    };
+
+    const parseMainPage = (show, content) => {
+      const nameMatch = content.match(/<strong id=\"mname\">(.*?)</) || [];
+      if (nameMatch.length > 1) {
+        show.name = nameMatch[1];
+      }
+      
+      const detailUrlMatch = content.match(/vod-play-id-(\d+)-/) || [];
+      if (detailUrlMatch.length > 1) {
+        show.id = detailUrlMatch[1];
+        parse(show);
+      } else {
+        console.log(`No id found for ${show.name} - ${show.url}`);
+      }
+    };
+    
+    shows.forEach((show, index) =>{
+      if (show.url) {
+        $.get(show.url, parseMainPage.bind(this, show))
+      } else {
+        parse(show);
+      }
+    });
+  }
+  
+  parseData(parentDiv, show, content, render) {  
     const url_list = content.match(/var\s+url_list.*?;/);
     const players = decodeURIComponent(url_list).split('$$$');
     const episodes = [];
@@ -90,13 +139,27 @@ class MyTw116 {
         const tokens = link.split('++');
         const name = tokens[0];
         const url = tokens[1];
-        const id = `${index}`;
-        episodes.push({name, url, id});
+        const id = `${show.id}-${index}`;
+        const watched = show.done && show.done > index;
+        episodes.push({name, url, id, watched});
       });
     }
 
     var d = Util.appendNewElement(parentDiv, {marginBottom: '20px'});
-    d.innerHTML = render(episodes);
+    d.innerHTML = render(show, episodes);
+  }
+  
+  openTab(id) {
+    for (let k in this.tabs) {
+      const v = this.tabs[k];
+      v.style = v.style || {};
+      if (k != id) {
+        v.style.display = 'none';
+      } else {
+        v.style.display = 'block';
+      }
+    }
+    this.selectedTab = id;
   }
 
   addParentDiv() {
@@ -113,6 +176,24 @@ class MyTw116 {
       this.element.appendChild(div);
     }
     return div;
+  }
+  
+  tabStyle() {
+    return {
+      cursor: 'pointer',
+      marginBottom: '20px',
+      marginRight: '20px',
+      display: 'inline-block'
+    };
+  }
+  
+  getShowName(show, episodes) {
+    return show.name || (() => {
+      if (episodes.length == 0)
+        return 'Unknown';
+      else 
+        return /mz=(.*?)S/.exec(episodes[0].url) || `Can't parse from ${episodes[0].url}`;
+    })();
   }
 };
 
