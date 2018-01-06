@@ -75,7 +75,7 @@ class MyTw116 {
   // Utility
   addTab(render) {
     const content = Util.appendNewElement(this.bodyContainer);
-    this.parseData(content, '', document.documentElement.innerHTML, render);
+    this.parseData(content, document.documentElement.innerHTML, render);
   }
     
   parseData(parentDiv, content, render) {  
