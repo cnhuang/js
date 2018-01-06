@@ -110,6 +110,7 @@ movieData = [
   SHOW('Downsizing'),
   SHOW('紅雀 Red Sparrow'),
   SHOW('黑豹'),
+  SHOW('Death Cure'),
   
 
   //SHOW('http://www.tw116.com/action/jialebihaidao5siwuduizheng/', '', 'Pirate 5'),
