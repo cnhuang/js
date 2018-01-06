@@ -86,7 +86,7 @@ class MyTw116 {
     };
 
     const failCallabck = (show, url) => {
-      console.log(`Error loading: ${show.url}`);
+      console.log(`Error loading: ${url}`);
     };
     
     const parse = (show) => {
@@ -95,7 +95,7 @@ class MyTw116 {
         show.url = url;
       }
       $.get(url, successCallback.bind(this, show))
-          .fail(failCallabck(show));
+          .fail(failCallabck(show, url));
     };
 
     const parseMainPage = (show, content) => {
