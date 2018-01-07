@@ -8,7 +8,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/xinfuermosishentanxialuokedisiji/', 3, 'English Homels'),
   SHOW('http://www.tw116.com/occident/zuieheimingdandisiji/', 22, '罪恶黑名单'),
   SHOW('http://www.tw116.com/occident/tianxiedisanji/', 14, 'scopin III'), 
-  SHOW('http://www.tw116.com/occident/shendunjutegongdisiji/', 22, 'shield IV'),
+  SHOW('http://www.tw116.com/occident/shendunjutegongdiwuji/', 0, 'shield 5'),
   SHOW('http://www.tw116.com/occident/mangdiandierji/', 22, 'Blind spot II'),
   SHOW('http://www.tw116.com/occident/jiexikaqiongsidiyiji/', 0, 'Jones'),
   SHOW('http://www.tw116.com/occident/lukekaiqidiyiji/', 8, 'Luke Cage'),
