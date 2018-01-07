@@ -40,6 +40,7 @@ tvData = [
   SHOW('http://www.tw116.com/occident/yirenzudiyiji/', 0, 'marvels inhuman'),
   SHOW('http://www.tw116.com/occident/meiguozhongshendiyiji/'),
   SHOW('http://www.tw116.com/anime/wangwangduilidagongdi4ji/'),
+  SHOW('http://www.tw116.com/occident/lijiatongmengdiyiji/', 0, 'runaway'),
 ];
 
 movieData = [
