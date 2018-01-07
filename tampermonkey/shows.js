@@ -100,6 +100,7 @@ movieData = [
   // SHOW('http://www.tw116.com/action/liexiongfenghegu/'),
   SHOW('http://www.tw116.com/action/yinbaozhe/', '', 'explosion-yin-bao-zhe 引爆者'),
   SHOW('http://www.tw116.com/action/yinglunduijue/'),
+  SHOW('http://www.tw116.com/fiction/xingqiudazhan8zuihoudejuediwushi/'),
   SHOW('ferdinand'),
   SHOW('jumanji-welcome-to-the-jungle'),
   SHOW('the-star'),
