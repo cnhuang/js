@@ -223,4 +223,5 @@ cartoonData = [
   SHOW('http://www.tw116.com/anime/guaiwushiruike4/'),
   SHOW('http://www.tw116.com/comedy/wodebabashisenlinzhiwang/'),
   SHOW('http://www.tw116.com/drama/jijingzhongdejingqi/'),
+  SHOW('http://www.tw116.com/anime/gongfuxiongmiao3/'),
 ];
