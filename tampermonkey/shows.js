@@ -42,6 +42,7 @@ tvData = [
   SHOW('http://www.tw116.com/anime/wangwangduilidagongdi4ji/'),
   SHOW('http://www.tw116.com/occident/lijiatongmengdiyiji/', 0, 'runaway'),
   SHOW('http://www.tw116.com/occident/shenmiboshidishiji/', 0, 'Dr. Who'),
+  SHOW('http://www.tw116.com/anime/juguailierendiyiji/', 5, '巨怪獵人'),
 ];
 
 movieData = [
