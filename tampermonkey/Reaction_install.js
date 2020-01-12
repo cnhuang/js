@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        *://www.recreation.gov*
+// @match        *://www.recreation*
 // @require      http://code.jquery.com/jquery-latest.js
 // @grant        none
 // ==/UserScript==
