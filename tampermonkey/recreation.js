@@ -17,5 +17,6 @@
       }
     }
 
+    console.log('>>> lets recreation');
     addControlPanel();
 })();
