@@ -41,6 +41,7 @@
                        </div>
                        <div style="display:flex;">
                          <div>Starting Time: <input type="text" placeholder="hhmm" id="h-startTime"></div>
+                         <div>Retry interval (ms): <input type="text" id="h-retry" value=1000></div>
                        </div>
                      </div>
                      <div>
@@ -121,7 +122,7 @@
                 if (stopFlag) {
                     log('stop');
                 } else {
-                    setTimeout(() => book(), 1000);
+                    setTimeout(() => book(), Number(getElm('#h-retry').val()));
                 }
             }
         });;
@@ -205,7 +206,7 @@
     function log(str) {
         const area = $("#h-log");
         if (area) {
-            area.val(area.val() + "\n" + str);
+            area.val(str + "\n" + area.val());
         } else {
             console.log(str);
         }
